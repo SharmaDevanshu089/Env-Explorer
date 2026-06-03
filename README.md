@@ -1,7 +1,4 @@
-# Tauri + SvelteKit
+#ENV EXPLORER
+### A Simple tool by Devanshu to manage .env files,project and act as dashboard for your projects.
 
-This template should help get you started developing with Tauri and SvelteKit in Vite.
-
-## Recommended IDE Setup
-
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
+> Licensed under : [MIT License](https://opensource.org/license/mit/)
