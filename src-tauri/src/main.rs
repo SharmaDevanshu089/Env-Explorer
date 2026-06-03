@@ -2,9 +2,11 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 #[macro_use]
 extern crate log;
+
+extern crate dirs;
 extern crate simplelog;
 
-use simplelog::*;
+mod crawl;
 fn main() {
     // intiate logging
     simplelog::CombinedLogger::init(vec![
@@ -17,6 +19,6 @@ fn main() {
     ])
     .unwrap();
     info!("Application started");
-
-    env_explorer_lib::run()
+    crawl::intiate_crawl();
+    env_explorer_lib::run();
 }
