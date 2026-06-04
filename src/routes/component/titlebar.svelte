@@ -37,6 +37,10 @@
   function stopPropagation(e) {
     e.stopPropagation();
   }
+
+  function handleRefresh() {
+    console.log("refresh initiate");
+  }
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -53,56 +57,72 @@
     <span class="titlebar__app-name">Environment Explorer</span>
   </div>
 
-  <!-- Right: Window controls -->
-  <div class="titlebar__controls">
+  <!-- Right: Actions & Window controls -->
+  <div class="titlebar__right">
     <button
-      class="titlebar__btn titlebar__btn--minimize"
-      on:click={handleMinimize}
+      class="titlebar__action-btn"
+      on:click={handleRefresh}
       on:mousedown={stopPropagation}
-      aria-label="Minimize"
-      title="Minimize"
+      aria-label="Refresh"
+      title="Refresh"
     >
-      <!-- Minimize Icon -->
-      <svg width="10" height="10" viewBox="0 0 10 1" xmlns="http://www.w3.org/2000/svg">
-        <rect width="10" height="1" fill="currentColor" />
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.65 2.35A7.958 7.958 0 0 0 8 0a8 8 0 1 0 8 8h-2a6 6 0 1 1-1.76-4.24L10 6h6V0l-2.35 2.35z" fill="currentColor"/>
       </svg>
     </button>
 
-    <button
-      class="titlebar__btn titlebar__btn--maximize"
-      on:click={handleMaximizeRestore}
-      on:mousedown={stopPropagation}
-      aria-label={isMaximized ? 'Restore' : 'Maximize'}
-      title={isMaximized ? 'Restore' : 'Maximize'}
-    >
-      {#if isMaximized}
-        <!-- Restore Icon -->
-        <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3 0v3H0v7h7V7h3V0H3zm6 6H7V3H4V1h5v5zM6 9H1V4h5v5z" fill="currentColor" />
-        </svg>
-      {:else}
-        <!-- Maximize Icon -->
-        <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 0v10h10V0H0zm9 9H1V1h8v8z" fill="currentColor" />
-        </svg>
-      {/if}
-    </button>
+    <div class="titlebar__separator"></div>
 
-    <button
-      class="titlebar__btn titlebar__btn--close"
-      on:click={handleClose}
-      on:mousedown={stopPropagation}
-      aria-label="Close"
-      title="Close"
-    >
-      <!-- Close Icon -->
-      <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M1.354.646a.5.5 0 0 0-.708.708L4.293 5 .646 8.646a.5.5 0 0 0 .708.708L5 5.707l3.646 3.647a.5.5 0 0 0 .708-.708L5.707 5l3.647-3.646a.5.5 0 0 0-.708-.708L5 4.293 1.354.646z"
-          fill="currentColor"
-        />
-      </svg>
-    </button>
+    <div class="titlebar__controls">
+      <button
+        class="titlebar__btn titlebar__btn--minimize"
+        on:click={handleMinimize}
+        on:mousedown={stopPropagation}
+        aria-label="Minimize"
+        title="Minimize"
+      >
+        <!-- Minimize Icon -->
+        <svg width="10" height="10" viewBox="0 0 10 1" xmlns="http://www.w3.org/2000/svg">
+          <rect width="10" height="1" fill="currentColor" />
+        </svg>
+      </button>
+
+      <button
+        class="titlebar__btn titlebar__btn--maximize"
+        on:click={handleMaximizeRestore}
+        on:mousedown={stopPropagation}
+        aria-label={isMaximized ? 'Restore' : 'Maximize'}
+        title={isMaximized ? 'Restore' : 'Maximize'}
+      >
+        {#if isMaximized}
+          <!-- Restore Icon -->
+          <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 0v3H0v7h7V7h3V0H3zm6 6H7V3H4V1h5v5zM6 9H1V4h5v5z" fill="currentColor" />
+          </svg>
+        {:else}
+          <!-- Maximize Icon -->
+          <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0v10h10V0H0zm9 9H1V1h8v8z" fill="currentColor" />
+          </svg>
+        {/if}
+      </button>
+
+      <button
+        class="titlebar__btn titlebar__btn--close"
+        on:click={handleClose}
+        on:mousedown={stopPropagation}
+        aria-label="Close"
+        title="Close"
+      >
+        <!-- Close Icon -->
+        <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M1.354.646a.5.5 0 0 0-.708.708L4.293 5 .646 8.646a.5.5 0 0 0 .708.708L5 5.707l3.646 3.647a.5.5 0 0 0 .708-.708L5.707 5l3.647-3.646a.5.5 0 0 0-.708-.708L5 4.293 1.354.646z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </div>
 
@@ -120,7 +140,7 @@
     margin: 0;
     box-sizing: border-box;
 
-    background: #111317 ;
+    background: #111317;
     backdrop-filter: blur(32px) saturate(1.6);
     -webkit-backdrop-filter: blur(32px) saturate(1.6);
 
@@ -163,12 +183,52 @@
     white-space: nowrap;
   }
 
+  /* ── Right — Actions & Window controls ── */
+
+  .titlebar__right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .titlebar__action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+    outline: none;
+  }
+
+  .titlebar__action-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  .titlebar__action-btn:active {
+    background: rgba(255, 255, 255, 0.14);
+  }
+
+  .titlebar__separator {
+    width: 1px;
+    height: 16px;
+    background: rgba(255, 255, 255, 0.12);
+    margin: 0 10px;
+  }
+
   /* ── Right — Window controls ── */
 
   .titlebar__controls {
     display: flex;
     align-items: stretch;
-    justify-self: end;
     height: 100%;
   }
 
