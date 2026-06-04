@@ -84,11 +84,11 @@ pub fn crawl(next_directory_path: PathBuf) {
                     | "Downloads"
                     | "Pictures"
                     | "Videos"
-                    | "Music" => {
+                    | "Music"
+                    | "CrossDevice" => {
                         info!("Skipping ignored directory: {}", string_file_name);
                     }
                     _ => {
-                        info!("{}", file_path.to_string_lossy());
                         crawl(file_path);
                     }
                 }
