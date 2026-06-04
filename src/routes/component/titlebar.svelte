@@ -120,7 +120,7 @@
     margin: 0;
     box-sizing: border-box;
 
-    background: rgb(23, 23, 26);
+    background: #111317 ;
     backdrop-filter: blur(32px) saturate(1.6);
     -webkit-backdrop-filter: blur(32px) saturate(1.6);
 
