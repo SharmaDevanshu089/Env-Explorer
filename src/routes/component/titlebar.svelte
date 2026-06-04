@@ -54,7 +54,6 @@
     <div class="titlebar__app-icon">
       <!-- Icon placeholder -->
     </div>
-    <span class="titlebar__app-name">Environment Explorer</span>
   </div>
 
   <!-- Right: Actions & Window controls -->
@@ -175,13 +174,6 @@
     opacity: 0.9;
   }
 
-  .titlebar__app-name {
-    font-size: 16px;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.72);
-    letter-spacing: 0.01em;
-    white-space: nowrap;
-  }
 
   /* ── Right — Actions & Window controls ── */
 
