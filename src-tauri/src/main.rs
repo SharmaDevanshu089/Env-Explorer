@@ -7,17 +7,23 @@ extern crate dirs;
 extern crate simplelog;
 
 mod crawl;
+const LOGGING: bool = true;
 fn main() {
-    // intiate logging
-    simplelog::CombinedLogger::init(vec![
-        simplelog::WriteLogger::new(
-            simplelog::LevelFilter::Debug,
-            simplelog::Config::default(),
-            std::fs::File::create("env_explorer.log").unwrap(),
-        ),
-        simplelog::SimpleLogger::new(simplelog::LevelFilter::Debug, simplelog::Config::default()),
-    ])
-    .unwrap();
+    if LOGGING {
+        // intiate logging
+        simplelog::CombinedLogger::init(vec![
+            simplelog::WriteLogger::new(
+                simplelog::LevelFilter::Debug,
+                simplelog::Config::default(),
+                std::fs::File::create("env_explorer.log").unwrap(),
+            ),
+            simplelog::SimpleLogger::new(
+                simplelog::LevelFilter::Debug,
+                simplelog::Config::default(),
+            ),
+        ])
+        .unwrap();
+    }
     info!("Application started");
     crawl::intiate_crawl();
     env_explorer_lib::run();

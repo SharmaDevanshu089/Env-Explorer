@@ -1,2 +1,540 @@
-18:36:04 [INFO] Application started
-18:36:04 [INFO] Home directory: C:\Users\sharm
+09:51:41 [INFO] Application started
+09:51:41 [INFO] Home directory: C:\Users\sharm
+09:51:41 [INFO] Crawling C:\Users\sharm
+09:51:41 [INFO] Skipping hidden directory: .android
+09:51:41 [INFO] Skipping hidden directory: .antigravity
+09:51:41 [INFO] Skipping hidden directory: .antigravity-ide
+09:51:41 [INFO] Skipping hidden directory: .cache
+09:51:41 [INFO] Skipping hidden directory: .cargo
+09:51:41 [INFO] Skipping hidden directory: .codex
+09:51:41 [INFO] Skipping hidden directory: .copilot
+09:51:41 [INFO] Skipping hidden directory: .crossnote
+09:51:41 [INFO] Skipping hidden directory: .e4mc_cache
+09:51:41 [INFO] Skipping hidden directory: .gemini
+09:51:41 [INFO] Skipping hidden directory: .obs64
+09:51:41 [INFO] Skipping hidden directory: .openjfx
+09:51:41 [INFO] Skipping hidden directory: .rustup
+09:51:41 [INFO] Skipping hidden directory: .securecoder
+09:51:41 [INFO] Skipping hidden directory: .ssh
+09:51:41 [INFO] Skipping hidden directory: .thumbnails
+09:51:41 [INFO] Skipping hidden directory: .VirtualBox
+09:51:41 [INFO] Skipping hidden directory: .vscode
+09:51:41 [INFO] Skipping hidden directory: .vscode-shared
+09:51:41 [INFO] C:\Users\sharm\ansel
+09:51:41 [INFO] Crawling C:\Users\sharm\ansel
+09:51:41 [INFO] Skipping ignored directory: AppData
+09:51:41 [INFO] C:\Users\sharm\Application Data
+09:51:41 [INFO] Crawling C:\Users\sharm\Application Data
+09:51:41 [WARN] Could not read directory C:\Users\sharm\Application Data: Access is denied. (os error 5)
+09:51:41 [INFO] C:\Users\sharm\blenderkit_data
+09:51:41 [INFO] Crawling C:\Users\sharm\blenderkit_data
+09:51:41 [INFO] C:\Users\sharm\blenderkit_data\client
+09:51:41 [INFO] Crawling C:\Users\sharm\blenderkit_data\client
+09:51:41 [INFO] Skipping ignored directory: bin
+09:51:41 [INFO] C:\Users\sharm\blenderkit_data\models
+09:51:41 [INFO] Crawling C:\Users\sharm\blenderkit_data\models
+09:51:41 [INFO] C:\Users\sharm\blenderkit_data\models\sci-fi-container_5b99ce15-55bb-49bb-9aea-eaa135358b44
+09:51:41 [INFO] Crawling C:\Users\sharm\blenderkit_data\models\sci-fi-container_5b99ce15-55bb-49bb-9aea-eaa135358b44
+09:51:41 [INFO] C:\Users\sharm\blenderkit_data\models\scifi-corridor_8ece883c-0a0c-4dd8-9137-af8d50a76041
+09:51:41 [INFO] Crawling C:\Users\sharm\blenderkit_data\models\scifi-corridor_8ece883c-0a0c-4dd8-9137-af8d50a76041
+09:51:41 [INFO] C:\Users\sharm\Contacts
+09:51:41 [INFO] Crawling C:\Users\sharm\Contacts
+09:51:41 [INFO] C:\Users\sharm\Cookies
+09:51:41 [INFO] Crawling C:\Users\sharm\Cookies
+09:51:41 [WARN] Could not read directory C:\Users\sharm\Cookies: Access is denied. (os error 5)
+09:51:41 [INFO] C:\Users\sharm\CrossDevice
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\Saved Searches
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\Saved Searches
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\AirDroid
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\AirDroid
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\AirDroid\ScreenRecord
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\AirDroid\ScreenRecord
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\AirDroid\upload
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\AirDroid\upload
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Alarms
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Alarms
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Android
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Android
+09:51:41 [INFO] Skipping ignored directory: media
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Audiobooks
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Audiobooks
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\DCIM
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\DCIM
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\DCIM\Blackmagic Camera
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\DCIM\Blackmagic Camera
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\DCIM\Camera
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\DCIM\Camera
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\DCIM\PhotosEditor
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\DCIM\PhotosEditor
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\DigiLocker
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\DigiLocker
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\DigiLocker\Issued
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\DigiLocker\Issued
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\DocsScannerBackups
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\DocsScannerBackups
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\a
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\a
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\b
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\b
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\c
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\c
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\d
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\d
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\e
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\e
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\f
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\f
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\g
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\g
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\h
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\h
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\i
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\i
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\j
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\j
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\k
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\k
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\l
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly1\l
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\a
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\a
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\b
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\b
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\c
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\c
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\d
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\d
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\e
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\e
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\f
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\f
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\g
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\g
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\h
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\h
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\i
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\i
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\j
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\j
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\k
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\k
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\l
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly3\l
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\0
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\0
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\1
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\1
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\2
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\2
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\3
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\3
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\4
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\4
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\5
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\5
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\6
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\6
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\7
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\7
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\8
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\8
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\9
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\9
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\a
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\a
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\b
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\b
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\c
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\c
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\d
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\d
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\e
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\e
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\f
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\f
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\g
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\g
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\h
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\h
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\i
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\i
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\j
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\j
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\k
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\k
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\l
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\l
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\m
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\m
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\n
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\n
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\o
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\o
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\p
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\p
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\q
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\q
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\r
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\r
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\s
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\s
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\t
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\t
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\u
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\u
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\v
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\v
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\w
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\w
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\x
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\x
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\y
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\y
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\z
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\ringtone\gamefree\jly5\z
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\user
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Documents\user
+09:51:41 [INFO] Skipping ignored directory: vendor
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Download
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Download
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Download\DOC-20260522-WA0004
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Download\DOC-20260522-WA0004
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Movies
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Movies
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Movies\Edits
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Movies\Edits
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Movies\Instagram
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Movies\Instagram
+09:51:41 [INFO] Skipping ignored directory: Music
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Notifications
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Notifications
+09:51:41 [INFO] Skipping ignored directory: Pictures
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Podcasts
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Podcasts
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Recordings
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Recordings
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Recycle bin - Connected device
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Recycle bin - Connected device
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Ringtones
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Ringtones
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Ringtones\Compositions
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Ringtones\Compositions
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Saved Searches
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\Saved Searches
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\storage
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\storage
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\storage\emulated
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\storage\emulated
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\storage\emulated\0
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\storage\emulated\0
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\storage\emulated\0\Download
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\storage\emulated\0\Download
+09:51:41 [INFO] C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\storage\emulated\0\Download\com.activision.callofduty.warzone.vizuff
+09:51:41 [INFO] Crawling C:\Users\sharm\CrossDevice\Nothing Phone (3a)\storage\storage\emulated\0\Download\com.activision.callofduty.warzone.vizuff
+09:51:41 [INFO] Skipping ignored directory: Downloads
+09:51:41 [INFO] C:\Users\sharm\Env Explorer
+09:51:41 [INFO] Crawling C:\Users\sharm\Env Explorer
+09:51:41 [INFO] Skipping hidden directory: .git
+09:51:41 [INFO] Skipping hidden directory: .svelte-kit
+09:51:41 [INFO] Skipping hidden directory: .vscode
+09:51:41 [INFO] Skipping ignored directory: node_modules
+09:51:41 [INFO] C:\Users\sharm\Env Explorer\src
+09:51:41 [INFO] Crawling C:\Users\sharm\Env Explorer\src
+09:51:41 [INFO] C:\Users\sharm\Env Explorer\src\routes
+09:51:41 [INFO] Crawling C:\Users\sharm\Env Explorer\src\routes
+09:51:41 [INFO] C:\Users\sharm\Env Explorer\src-tauri
+09:51:41 [INFO] Crawling C:\Users\sharm\Env Explorer\src-tauri
+09:51:41 [INFO] C:\Users\sharm\Env Explorer\src-tauri\capabilities
+09:51:41 [INFO] Crawling C:\Users\sharm\Env Explorer\src-tauri\capabilities
+09:51:41 [INFO] C:\Users\sharm\Env Explorer\src-tauri\gen
+09:51:41 [INFO] Crawling C:\Users\sharm\Env Explorer\src-tauri\gen
+09:51:41 [INFO] C:\Users\sharm\Env Explorer\src-tauri\gen\schemas
+09:51:41 [INFO] Crawling C:\Users\sharm\Env Explorer\src-tauri\gen\schemas
+09:51:41 [INFO] C:\Users\sharm\Env Explorer\src-tauri\icons
+09:51:41 [INFO] Crawling C:\Users\sharm\Env Explorer\src-tauri\icons
+09:51:41 [INFO] C:\Users\sharm\Env Explorer\src-tauri\src
+09:51:41 [INFO] Crawling C:\Users\sharm\Env Explorer\src-tauri\src
+09:51:41 [INFO] Skipping ignored directory: target
+09:51:41 [INFO] C:\Users\sharm\Env Explorer\static
+09:51:41 [INFO] Crawling C:\Users\sharm\Env Explorer\static
+09:51:41 [INFO] C:\Users\sharm\Favorites
+09:51:41 [INFO] Crawling C:\Users\sharm\Favorites
+09:51:41 [INFO] C:\Users\sharm\Favorites\Links
+09:51:41 [INFO] Crawling C:\Users\sharm\Favorites\Links
+09:51:41 [INFO] C:\Users\sharm\Links
+09:51:41 [INFO] Crawling C:\Users\sharm\Links
+09:51:41 [INFO] C:\Users\sharm\Local Settings
+09:51:41 [INFO] Crawling C:\Users\sharm\Local Settings
+09:51:41 [WARN] Could not read directory C:\Users\sharm\Local Settings: Access is denied. (os error 5)
+09:51:41 [INFO] Skipping ignored directory: Music
+09:51:41 [INFO] C:\Users\sharm\NetHood
+09:51:41 [INFO] Crawling C:\Users\sharm\NetHood
+09:51:41 [WARN] Could not read directory C:\Users\sharm\NetHood: Access is denied. (os error 5)
+09:51:41 [INFO] Skipping ignored directory: node_modules
+09:51:41 [INFO] C:\Users\sharm\OneDrive
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive
+09:51:41 [INFO] C:\Users\sharm\OneDrive\ArrowBackup
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\ArrowBackup
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Attachments
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Attachments
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Desktop
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Desktop
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Document
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Document
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Assassin's Creed Mirage
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Assassin's Creed Mirage
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Assassin's Creed Mirage\cache
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Assassin's Creed Mirage\cache
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Assassin's Creed Mirage\saves
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Assassin's Creed Mirage\saves
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Battlefield 1
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Battlefield 1
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Battlefield 1\Screenshots
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Battlefield 1\Screenshots
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Battlefield 1\settings
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Battlefield 1\settings
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Battlefield 1\twinkle
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Battlefield 1\twinkle
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Battlefield 1\twinkle\kvstore
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Battlefield 1\twinkle\kvstore
+09:51:41 [INFO] Skipping ignored directory: temp
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Battlefield 2042
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Battlefield 2042
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Battlefield 2042\CrashDumps
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Battlefield 2042\CrashDumps
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Battlefield 2042\go1
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Battlefield 2042\go1
+09:51:41 [INFO] Skipping hidden directory: .git
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Battlefield 2042\go1\src
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Battlefield 2042\go1\src
+09:51:41 [INFO] Skipping ignored directory: target
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Battlefield 2042\go2
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Battlefield 2042\go2
+09:51:41 [INFO] Skipping hidden directory: .git
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Battlefield 2042\go2\src
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Battlefield 2042\go2\src
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Battlefield 2042\Screenshots
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Battlefield 2042\Screenshots
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Battlefield 2042\settings
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Battlefield 2042\settings
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Call of Duty Modern Warfare
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Call of Duty Modern Warfare
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Call of Duty Modern Warfare\players
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Call of Duty Modern Warfare\players
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Call of Duty Modern Warfare\report
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Call of Duty Modern Warfare\report
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Call of Duty Modern Warfare\report\gpu
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Call of Duty Modern Warfare\report\gpu
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Call of Duty MWIII
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Call of Duty MWIII
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Call of Duty MWIII\players
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Call of Duty MWIII\players
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Call of Duty MWIII\players\2535444868843850
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Call of Duty MWIII\players\2535444868843850
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\DyingLight
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\DyingLight
+09:51:41 [INFO] Skipping ignored directory: out
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\KMSAuto-Net
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\KMSAuto-Net
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\KMSAuto-Net\KMSAuto Net 2016 1.4.9 Portable + 1.5.1
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\KMSAuto-Net\KMSAuto Net 2016 1.4.9 Portable + 1.5.1
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\KMSAuto-Net\KMSAuto Net 2016 1.4.9 Portable + 1.5.1\readme
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\KMSAuto-Net\KMSAuto Net 2016 1.4.9 Portable + 1.5.1\readme
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Marvel's Spider-Man Miles Morales
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Marvel's Spider-Man Miles Morales
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Marvel's Spider-Man Miles Morales\76561197960271872
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Marvel's Spider-Man Miles Morales\76561197960271872
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Marvel's Spider-Man Miles Morales\Screenshots
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Marvel's Spider-Man Miles Morales\Screenshots
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\MAXON
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\MAXON
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\MAXON\Cinebench_2024.0.0
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\MAXON\Cinebench_2024.0.0
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\MAXON\Cinebench_2024.0.0\cb_ranking
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\MAXON\Cinebench_2024.0.0\cb_ranking
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2\Binaries
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2\Binaries
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2\Binaries\Win32
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2\Binaries\Win32
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2\LauncherData
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2\LauncherData
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2\WillowGame
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2\WillowGame
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2\WillowGame\Config
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2\WillowGame\Config
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2\WillowGame\Config\LauncherConfig
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2\WillowGame\Config\LauncherConfig
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2\WillowGame\Logs
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2\WillowGame\Logs
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2\WillowGame\PersistentDownloadDir
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2\WillowGame\PersistentDownloadDir
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2\WillowGame\SaveData
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2\WillowGame\SaveData
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2\WillowGame\SaveData\76561199387407592
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\Borderlands 2\WillowGame\SaveData\76561199387407592
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\Control
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\Control
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\Control\Saves
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\Control\Saves
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\F1 25
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\F1 25
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\F1 25\benchmark
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\F1 25\benchmark
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\F1 25\hardwaresettings
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\F1 25\hardwaresettings
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\WarThunder
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\WarThunder
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\WarThunder\Saves
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\WarThunder\Saves
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\WarThunder\Saves\145295454
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\WarThunder\Saves\145295454
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\WarThunder\Saves\145295454\production
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\WarThunder\Saves\145295454\production
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\WarThunder\Saves\last
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\WarThunder\Saves\last
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\My games\WarThunder\Saves\last\production
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\My games\WarThunder\Saves\last\production
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Peace automatic configurations backup
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Peace automatic configurations backup
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Roboto.rel-xplay.Win32
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Roboto.rel-xplay.Win32
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Roboto.rel-xplay.Win32\CrashDumps
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Roboto.rel-xplay.Win32\CrashDumps
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Rockstar Games
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Rockstar Games
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Rockstar Games\Red Dead Redemption 2
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Rockstar Games\Red Dead Redemption 2
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Rockstar Games\Red Dead Redemption 2\Benchmarks
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Rockstar Games\Red Dead Redemption 2\Benchmarks
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Rockstar Games\Red Dead Redemption 2\Settings
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Rockstar Games\Red Dead Redemption 2\Settings
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\STAR WARS Battlefront II
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\STAR WARS Battlefront II
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\STAR WARS Battlefront II\CrashDumps
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\STAR WARS Battlefront II\CrashDumps
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\STAR WARS Battlefront II\RimeTemp
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\STAR WARS Battlefront II\RimeTemp
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\STAR WARS Battlefront II\Screenshots
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\STAR WARS Battlefront II\Screenshots
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\STAR WARS Battlefront II\settings
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\STAR WARS Battlefront II\settings
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Teardown
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Teardown
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Teardown\mods
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Teardown\mods
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\The Witcher 3
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\The Witcher 3
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\The Witcher 3\gamesaves
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\The Witcher 3\gamesaves
+09:51:41 [INFO] C:\Users\sharm\OneDrive\Documents\Virtual Machines
+09:51:41 [INFO] Crawling C:\Users\sharm\OneDrive\Documents\Virtual Machines
+09:51:41 [INFO] Skipping ignored directory: Pictures
+09:51:41 [INFO] C:\Users\sharm\PrintHood
+09:51:41 [INFO] Crawling C:\Users\sharm\PrintHood
+09:51:41 [WARN] Could not read directory C:\Users\sharm\PrintHood: Access is denied. (os error 5)
+09:51:41 [INFO] C:\Users\sharm\Recent
+09:51:41 [INFO] Crawling C:\Users\sharm\Recent
+09:51:41 [WARN] Could not read directory C:\Users\sharm\Recent: Access is denied. (os error 5)
+09:51:41 [INFO] C:\Users\sharm\Saved Games
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games
+09:51:41 [INFO] C:\Users\sharm\Saved Games\Crysis3Remastered
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\Crysis3Remastered
+09:51:41 [INFO] C:\Users\sharm\Saved Games\Crysis3Remastered\ModelsCache
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\Crysis3Remastered\ModelsCache
+09:51:41 [INFO] C:\Users\sharm\Saved Games\Crysis3Remastered\Profiles
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\Crysis3Remastered\Profiles
+09:51:41 [INFO] C:\Users\sharm\Saved Games\Crysis3Remastered\Profiles\default
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\Crysis3Remastered\Profiles\default
+09:51:41 [INFO] C:\Users\sharm\Saved Games\Crysis3Remastered\SaveGames
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\Crysis3Remastered\SaveGames
+09:51:41 [INFO] C:\Users\sharm\Saved Games\Crysis3Remastered\Shaders
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\Crysis3Remastered\Shaders
+09:51:41 [INFO] C:\Users\sharm\Saved Games\Crysis3Remastered\Shaders\Cache
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\Crysis3Remastered\Shaders\Cache
+09:51:41 [INFO] C:\Users\sharm\Saved Games\Crysis3Remastered\Shaders\Cache\D3D11
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\Crysis3Remastered\Shaders\Cache\D3D11
+09:51:41 [INFO] C:\Users\sharm\Saved Games\Crysis3Remastered\Shaders\Cache\D3D11\CGPShaders
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\Crysis3Remastered\Shaders\Cache\D3D11\CGPShaders
+09:51:41 [INFO] C:\Users\sharm\Saved Games\Crysis3Remastered\Shaders\Cache\D3D11\CGVShaders
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\Crysis3Remastered\Shaders\Cache\D3D11\CGVShaders
+09:51:41 [INFO] Skipping ignored directory: temp
+09:51:41 [INFO] C:\Users\sharm\Saved Games\God of War
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\God of War
+09:51:41 [INFO] C:\Users\sharm\Saved Games\God of War\3203383023
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\God of War\3203383023
+09:51:41 [INFO] C:\Users\sharm\Saved Games\id Software
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\id Software
+09:51:41 [INFO] C:\Users\sharm\Saved Games\id Software\DOOMEternal
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\id Software\DOOMEternal
+09:51:41 [INFO] C:\Users\sharm\Saved Games\id Software\DOOMEternal\base
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\id Software\DOOMEternal\base
+09:51:41 [INFO] C:\Users\sharm\Saved Games\id Software\DOOMEternal\base\generated
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\id Software\DOOMEternal\base\generated
+09:51:41 [INFO] Skipping ignored directory: temp
+09:51:41 [INFO] C:\Users\sharm\Saved Games\Respawn
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\Respawn
+09:51:41 [INFO] C:\Users\sharm\Saved Games\Respawn\JediFallenOrder
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\Respawn\JediFallenOrder
+09:51:41 [INFO] C:\Users\sharm\Saved Games\Respawn\JediSurvivor
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\Respawn\JediSurvivor
+09:51:41 [INFO] C:\Users\sharm\Saved Games\The Last of Us Part I
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\The Last of Us Part I
+09:51:41 [INFO] C:\Users\sharm\Saved Games\The Last of Us Part I\users
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\The Last of Us Part I\users
+09:51:41 [INFO] C:\Users\sharm\Saved Games\The Last of Us Part I\users\6144
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\The Last of Us Part I\users\6144
+09:51:41 [INFO] C:\Users\sharm\Saved Games\The Last of Us Part I\users\6144\gamedata
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\The Last of Us Part I\users\6144\gamedata
+09:51:41 [INFO] C:\Users\sharm\Saved Games\The Last of Us Part I\users\6144\savedata
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\The Last of Us Part I\users\6144\savedata
+09:51:41 [INFO] C:\Users\sharm\Saved Games\The Last of Us Part I\users\6144\savedata\SAVEFILE00
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\The Last of Us Part I\users\6144\savedata\SAVEFILE00
+09:51:41 [INFO] C:\Users\sharm\Saved Games\The Last of Us Part I\users\6144\savedata\SAVEFILE01
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\The Last of Us Part I\users\6144\savedata\SAVEFILE01
+09:51:41 [INFO] C:\Users\sharm\Saved Games\The Last of Us Part I\users\6144\savedata\SAVEFILE02
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\The Last of Us Part I\users\6144\savedata\SAVEFILE02
+09:51:41 [INFO] C:\Users\sharm\Saved Games\The Last of Us Part I\users\6144\savedata\SAVEFILE0A
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\The Last of Us Part I\users\6144\savedata\SAVEFILE0A
+09:51:41 [INFO] C:\Users\sharm\Saved Games\The Last of Us Part I\users\6144\savedata\SAVEFILE0P
+09:51:41 [INFO] Crawling C:\Users\sharm\Saved Games\The Last of Us Part I\users\6144\savedata\SAVEFILE0P
+09:51:41 [INFO] C:\Users\sharm\Searches
+09:51:41 [INFO] Crawling C:\Users\sharm\Searches
+09:51:41 [INFO] C:\Users\sharm\SendTo
+09:51:41 [INFO] Crawling C:\Users\sharm\SendTo
+09:51:41 [WARN] Could not read directory C:\Users\sharm\SendTo: Access is denied. (os error 5)
+09:51:41 [INFO] C:\Users\sharm\Start Menu
+09:51:41 [INFO] Crawling C:\Users\sharm\Start Menu
+09:51:41 [WARN] Could not read directory C:\Users\sharm\Start Menu: Access is denied. (os error 5)
+09:51:41 [INFO] C:\Users\sharm\Templates
+09:51:41 [INFO] Crawling C:\Users\sharm\Templates
+09:51:41 [WARN] Could not read directory C:\Users\sharm\Templates: Access is denied. (os error 5)
+09:51:41 [INFO] Skipping ignored directory: Videos
+09:51:41 [INFO] C:\Users\sharm\VirtualBox VMs
+09:51:41 [INFO] Crawling C:\Users\sharm\VirtualBox VMs
+09:51:41 [INFO] C:\Users\sharm\VirtualBox VMs\Steam
+09:51:41 [INFO] Crawling C:\Users\sharm\VirtualBox VMs\Steam
+09:51:41 [INFO] C:\Users\sharm\VirtualBox VMs\Steam\Logs
+09:51:41 [INFO] Crawling C:\Users\sharm\VirtualBox VMs\Steam\Logs
