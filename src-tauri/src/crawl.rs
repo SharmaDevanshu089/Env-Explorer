@@ -95,6 +95,9 @@ pub fn crawl(next_directory_path: PathBuf) {
             }
         } else {
             //check for env
+            if file_name == ".env" {
+                info!("Found env at {}", file_path.to_string_lossy());
+            }
         }
     }
 }
