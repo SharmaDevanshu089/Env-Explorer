@@ -50,7 +50,7 @@
     <div class="titlebar__app-icon">
       <!-- Icon placeholder -->
     </div>
-    <span class="titlebar__app-name">GitHub Explorer</span>
+    <span class="titlebar__app-name">Environment Explorer</span>
   </div>
 
   <!-- Right: Window controls -->

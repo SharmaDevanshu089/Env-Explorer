@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "env-explorer",
+        "title": "envirment-explorer",
         "width": 1280,
         "height": 720,
         "minHeight": 640,
