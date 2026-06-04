@@ -11,3 +11,4 @@ vite.config.ts.timestamp-*
 *.log
 env_explorer.log
 src-tauri/env_explorer.log
+*.json

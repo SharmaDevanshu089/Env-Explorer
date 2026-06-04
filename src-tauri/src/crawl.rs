@@ -1,15 +1,31 @@
-use log;
-use simplelog;
 use std::fs;
 use std::path::PathBuf;
 
 extern crate dirs;
 
+#[derive(serde::Serialize, Debug, Clone)]
+pub struct ProjectEnv {
+    pub name: String,
+    pub path: String,
+}
+
 pub fn intiate_crawl() {
     match dirs::home_dir() {
         Some(path) => {
             info!("Home directory: {}", path.display());
-            crawl(path);
+            let mut env_files = Vec::new();
+            scan(path, &mut env_files);
+            
+            // Serialize to JSON and write to config
+            match serde_json::to_string_pretty(&env_files) {
+                Ok(json_data) => {
+                    match fs::write("env_config.json", json_data) {
+                        Ok(_) => info!("Successfully wrote env config to env_config.json"),
+                        Err(e) => error!("Failed to write env config to env_config.json: {}", e),
+                    }
+                }
+                Err(e) => error!("Failed to serialize env files: {}", e),
+            }
         }
         #[allow(non_snake_case)]
         None => {
@@ -18,7 +34,8 @@ pub fn intiate_crawl() {
         }
     }
 }
-pub fn crawl(next_directory_path: PathBuf) {
+
+pub fn scan(next_directory_path: PathBuf, env_files: &mut Vec<ProjectEnv>) {
     info!("Crawling {}", next_directory_path.to_string_lossy());
     let directory = match fs::read_dir(&next_directory_path) {
         Ok(dir) => dir,
@@ -32,7 +49,10 @@ pub fn crawl(next_directory_path: PathBuf) {
         }
     };
     for entry in directory {
-        let entry = entry.unwrap();
+        let entry = match entry {
+            Ok(e) => e,
+            Err(_) => continue,
+        };
         let file_name = entry.file_name();
         let file_path = next_directory_path.join(&file_name);
         let string_file_name = file_name.to_string_lossy();
@@ -89,7 +109,7 @@ pub fn crawl(next_directory_path: PathBuf) {
                         info!("Skipping ignored directory: {}", string_file_name);
                     }
                     _ => {
-                        crawl(file_path);
+                        scan(file_path, env_files);
                     }
                 }
             }
@@ -97,6 +117,16 @@ pub fn crawl(next_directory_path: PathBuf) {
             //check for env
             if file_name == ".env" {
                 info!("Found env at {}", file_path.to_string_lossy());
+                let parent = file_path.parent();
+                let project_name = parent
+                    .and_then(|p| p.file_name())
+                    .map(|n| n.to_string_lossy().into_owned())
+                    .unwrap_or_else(|| "Unknown".to_string());
+                
+                env_files.push(ProjectEnv {
+                    name: project_name,
+                    path: file_path.to_string_lossy().into_owned(),
+                });
             }
         }
     }
