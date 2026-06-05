@@ -1,9 +1,9 @@
 <script>
     import ApplicationTitlebar from '../component/titlebar.svelte';
     import Icon from '../component/Icon.svelte';
-    import ProjectWindow from "./projectWindow.svelte"
-    import AnalyticWindow from "./analyticWindow.svelte"
-    import BulkWindow from "./bulkWindow.svelte"
+    import ProjectWindow from "./windows/projectWindow.svelte"
+    import AnalyticWindow from "./windows/analyticWindow.svelte"
+    import BulkWindow from "./windows/bulkWindow.svelte"
 
     let active = "projects";
 </script>
