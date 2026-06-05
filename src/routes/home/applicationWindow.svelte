@@ -95,7 +95,7 @@
     grid-template-columns: 260px 1fr;
     height: 100vh;
     font-family: 'Inter', 'Segoe UI Variable', 'Segoe UI', sans-serif;
-    background: #090a0c;
+    background: #191b1f;
   }
 
   main {
@@ -108,9 +108,9 @@
   }
 
   .content {
-    padding: 24px;
+    /* padding: 12px; */
     flex: 1;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     color: #fff;
     background-color: transparent;
   }
