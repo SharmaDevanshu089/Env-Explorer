@@ -3,6 +3,7 @@ use std::path::PathBuf;
 use log::error;
 use log::info;
 use log::warn;
+use tauri::Manager;
 
 extern crate dirs;
 
@@ -13,7 +14,7 @@ pub struct ProjectEnv {
 }
 
 #[tauri::command]
-pub fn intiate_crawl() {
+pub fn intiate_crawl(app_handle: tauri::AppHandle) {
     match dirs::home_dir() {
         Some(path) => {
             info!("Home directory: {}", path.display());
@@ -23,9 +24,23 @@ pub fn intiate_crawl() {
             // Serialize to JSON and write to config
             match serde_json::to_string_pretty(&env_files) {
                 Ok(json_data) => {
-                    match fs::write("env_config.json", json_data) {
-                        Ok(_) => info!("Successfully wrote env config to env_config.json"),
-                        Err(e) => error!("Failed to write env config to env_config.json: {}", e),
+                    let local_data_dir = match app_handle.path().app_local_data_dir() {
+                        Ok(dir) => dir,
+                        Err(e) => {
+                            error!("Failed to get app local data dir: {}", e);
+                            return;
+                        }
+                    };
+                    
+                    if let Err(e) = fs::create_dir_all(&local_data_dir) {
+                        error!("Failed to create local data dir: {}", e);
+                        return;
+                    }
+                    
+                    let path = local_data_dir.join("env_config.json");
+                    match fs::write(&path, json_data) {
+                        Ok(_) => info!("Successfully wrote env config to {}", path.display()),
+                        Err(e) => error!("Failed to write env config to {}: {}", path.display(), e),
                     }
                 }
                 Err(e) => error!("Failed to serialize env files: {}", e),
