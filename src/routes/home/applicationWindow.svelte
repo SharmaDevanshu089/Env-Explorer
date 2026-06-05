@@ -8,13 +8,13 @@
     let active = "projects";
 </script>
 <div class="shell">
-  <aside class="sidebar">
+  <aside class="sidebar" data-tauri-drag-region>
     <header class="sidebar-header">
         <div class="logo">
             🚀
         </div>
 
-        <div class="title-container">
+        <div class="title-container" data-tauri-drag-region>
             <h1 class="title">Env Explorer</h1>
             <p class="subtitle">Local Environment Manager</p>
         </div>
