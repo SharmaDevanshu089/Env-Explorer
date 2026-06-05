@@ -3,6 +3,8 @@
     import { Spinner } from "flowbite-svelte";
     import { invoke } from "@tauri-apps/api/core";
     import { onMount } from "svelte";
+  import { Button } from "flowbite-svelte";
+
     let state = "loading" ;
     let loadingtext = "Scanning...";
     let env_data = [];
@@ -36,5 +38,32 @@
         <Spinner type="bars" color="#72ddc3" size="16"/>
         <span class="text-white mt-2">{loadingtext}</span>
     </div>
+    {/if}
+    {#if state === "loaded"}
+        <div class="flex flex-col gap-3 w-full max-w-4xl mx-auto p-4">
+            <div class="flex justify-between items-center mb-2 border-b border-white/5 pb-3">
+                <div>
+                    <h2 class="text-lg font-semibold text-white">Projects</h2>
+                    <p class="text-xs text-gray-400">Environment configurations found on your system</p>
+                </div>
+                <span class="text-xs px-2.5 py-1 bg-[#72ddc3]/10 text-[#72ddc3] rounded-full border border-[#72ddc3]/20 font-medium">
+                    {env_data.length} Found
+                </span>
+            </div>
+            
+            <div class="flex flex-col gap-2 overflow-y-auto max-h-[calc(100vh-200px)]">
+                {#each env_data as env}
+                    <div class="flex justify-between items-center p-4 bg-[#111317] rounded-lg border border-white/5 hover:border-[#72ddc3]/30 transition-all duration-200">
+                        <div class="flex flex-col gap-1">
+                            <h5 class="text-sm font-semibold text-white">{env.name}</h5>
+                            <p class="text-xs text-gray-400 font-mono select-all">{env.path}</p>
+                        </div>
+                        <Button size="xs" class="bg-[#72ddc3]/10 text-[#72ddc3] border border-[#72ddc3]/20 hover:bg-[#72ddc3] hover:text-black transition-all">
+                            Configure
+                        </Button>
+                    </div>
+                {/each}
+            </div>
+        </div>
     {/if}
 </div>
