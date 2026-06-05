@@ -1,7 +1,12 @@
 <script>
     // import { projectWindow } from './projectsWindow';
     import { Spinner } from "flowbite-svelte";
+    import { invoke } from "@tauri-apps/api/core";
     let state = "loading" ;
+    let loadingtext = "Scanning...";
+    
+    // Scanning shuru ki hai 
+    await 
     
 </script>
 <div class="window-root flex justify-center items-center">

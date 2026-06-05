@@ -1,5 +1,6 @@
 // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
 pub mod reader;
+pub mod crawl;
 // use tauri::Manager;
 // use window_vibrancy::apply_mica;
 
@@ -20,7 +21,7 @@ pub fn run() {
         //     Ok(())
         // })
         .plugin(tauri_plugin_opener::init())
-        .invoke_handler(tauri::generate_handler![greet, reader::read_env_config])
+        .invoke_handler(tauri::generate_handler![greet, reader::read_env_config , crawl::intiate_crawl])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

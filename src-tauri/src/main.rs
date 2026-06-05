@@ -25,6 +25,5 @@ fn main() {
         .unwrap();
     }
     info!("Application started");
-    crawl::intiate_crawl();
     env_explorer_lib::run();
 }

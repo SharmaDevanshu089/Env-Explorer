@@ -1,5 +1,8 @@
 use std::fs;
 use std::path::PathBuf;
+use log::error;
+use log::info;
+use log::warn;
 
 extern crate dirs;
 
@@ -9,6 +12,7 @@ pub struct ProjectEnv {
     pub path: String,
 }
 
+#[tauri::command]
 pub fn intiate_crawl() {
     match dirs::home_dir() {
         Some(path) => {
