@@ -23,6 +23,7 @@ pub fn run() {
         .plugin(tauri_plugin_opener::init())
         .invoke_handler(tauri::generate_handler![
             reader::get_current_env_vars,
+            reader::count_env_vars,
             reader::read_env_config,
             crawl::intiate_crawl
         ])

@@ -61,3 +61,9 @@ pub async fn get_current_env_vars(path: String) -> HashMap<String, String> {
     log::info!("ENV is {:?}", env_map);
     env_map
 }
+
+#[tauri::command]
+pub fn count_env_vars(path: String) -> usize {
+    read_env_file(&path).map(|vars| vars.len()).unwrap_or(0)
+}
+

@@ -4,7 +4,7 @@
     import { invoke } from "@tauri-apps/api/core";
     import { onMount } from "svelte";
   import { Button } from "flowbite-svelte";
-
+ 
     let state = "loading" ;
     let loadingtext = "Scanning...";
     let env_data = [];
@@ -18,14 +18,17 @@
         
         try {
             env_data = await invoke("read_env_config");
+            for (let env of env_data) {
+                env.count = await invoke("count_env_vars", { path: env.path });
+            }
+            env_data = [...env_data];
             console.log("Successfully fetched env_data:", env_data);
         } catch (e) {
             console.error("Error reading env config:", e);
         }
-        env_data.forEach((envpath) => {console.log(envpath.path);})
         state = "loaded";
     }
-
+ 
     onMount(() => {
         first_update();
     });
@@ -59,7 +62,7 @@
                             <p class="text-xs text-gray-400 font-mono select-all">{env.path}</p>
                         </div>
                         <Button size="xs" class="bg-[#72ddc3]/10 text-[#72ddc3] border border-[#72ddc3]/20 hover:bg-[#72ddc3] hover:text-black transition-all">
-                            Load
+                            Load {#if env.count !== undefined}({env.count}){/if}
                         </Button>
                     </div>
                 {/each}
