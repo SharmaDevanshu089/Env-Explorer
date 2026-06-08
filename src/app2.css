@@ -9,4 +9,9 @@
 .no-scroll::-webkit-scrollbar-thumb {
   background-color: #111317;
   border-radius: 4px;
+      border-style: var(oklab(0.999994 0.0000455678 0.0000200868 / 0.05));
+    border-width: 1px;
+}
+.no-scroll{
+  padding-right: 5px;
 }

@@ -20,28 +20,26 @@ pub fn read_env_config(app_handle: tauri::AppHandle) -> Result<Vec<ProjectEnv>, 
         .map_err(|e| format!("Failed to get app local data dir: {}", e))?
         .join("env_config.json");
 
-    log::info!("Reading env config from: {}", path.display());
+    log::info!("[reader] read_env_config called. Config path: {}", path.display());
 
     if !path.exists() {
+        log::warn!("[reader] read_env_config: env_config.json does not exist yet.");
         return Ok(Vec::new());
     }
 
     let content = fs::read_to_string(&path).map_err(|e| {
-        format!(
-            "Failed to read env_config.json at {}: {}",
-            path.display(),
-            e
-        )
+        let msg = format!("Failed to read env_config.json at {}: {}", path.display(), e);
+        log::error!("[reader] {}", msg);
+        msg
     })?;
 
     let config: Vec<ProjectEnv> = serde_json::from_str(&content).map_err(|e| {
-        format!(
-            "Failed to parse env_config.json from {}: {}",
-            path.display(),
-            e
-        )
+        let msg = format!("Failed to parse env_config.json from {}: {}", path.display(), e);
+        log::error!("[reader] {}", msg);
+        msg
     })?;
 
+    log::info!("[reader] read_env_config: successfully read {} projects.", config.len());
     Ok(config)
 }
 
@@ -52,18 +50,36 @@ struct MyState {
 }
 #[tauri::command]
 pub async fn get_current_env_vars(path: String) -> HashMap<String, String> {
-    log::info!("Reading  {}", path.to_string());
-    let env_vars = read_env_file(&path).unwrap();
-    let mut env_map = HashMap::new();
-    for (key, value) in env_vars {
-        env_map.insert(key, value);
+    log::info!("[reader] get_current_env_vars called for path: {}", path);
+    match read_env_file(&path) {
+        Ok(env_vars) => {
+            let mut env_map = HashMap::new();
+            for (key, value) in env_vars {
+                env_map.insert(key, value);
+            }
+            log::info!("[reader] get_current_env_vars for path {} retrieved {} variables.", path, env_map.len());
+            env_map
+        }
+        Err(e) => {
+            log::error!("[reader] get_current_env_vars failed to read env file at {}: {}", path, e);
+            HashMap::new()
+        }
     }
-    log::info!("ENV is {:?}", env_map);
-    env_map
 }
 
 #[tauri::command]
 pub fn count_env_vars(path: String) -> usize {
-    read_env_file(&path).map(|vars| vars.len()).unwrap_or(0)
+    log::info!("[reader] count_env_vars called for path: {}", path);
+    match read_env_file(&path) {
+        Ok(vars) => {
+            let count = vars.len();
+            log::info!("[reader] count_env_vars: successfully parsed {} vars from {}", count, path);
+            count
+        }
+        Err(e) => {
+            log::warn!("[reader] count_env_vars: failed to parse env file at {}: {}", path, e);
+            0
+        }
+    }
 }
 
