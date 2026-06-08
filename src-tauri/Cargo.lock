@@ -908,6 +908,7 @@ name = "env-explorer"
 version = "0.1.0"
 dependencies = [
  "dirs 5.0.1",
+ "env-file-parser",
  "log",
  "serde",
  "serde_json",
@@ -917,6 +918,12 @@ dependencies = [
  "tauri-plugin-opener",
  "window-vibrancy 0.7.1",
 ]
+
+[[package]]
+name = "env-file-parser"
+version = "1.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "48d2e10703dc67e0b70975e9a29e4a29e841179d3f438a7e93079461a0a0a509"
 
 [[package]]
 name = "equivalent"
