@@ -22,9 +22,7 @@
         } catch (e) {
             console.error("Error reading env config:", e);
         }
-        await invoke("get_current_env_vars", {
-            path: "C:/Users/sharm/env-loader/.env"
-        })
+        env_data.forEach((envpath) => {console.log(envpath.path);})
         state = "loaded";
     }
 
