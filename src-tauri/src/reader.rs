@@ -51,7 +51,7 @@ struct MyState {
     t: std::sync::Mutex<std::collections::HashMap<String, String>>,
 }
 #[tauri::command]
-async fn get_current_env_vars(path: String) -> HashMap<String, String> {
+pub async fn get_current_env_vars(path: String) -> HashMap<String, String> {
     log::info!("Reading  {}", path.to_string());
     let env_vars = read_env_file(&path).unwrap();
     let mut env_map = HashMap::new();
