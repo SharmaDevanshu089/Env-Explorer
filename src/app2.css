@@ -1,0 +1,12 @@
+
+.no-scroll::-webkit-scrollbar {
+  width: 8px;        
+  color:#111317 ;    
+}
+.no-scroll::-webkit-scrollbar-track {
+  background: transparent; 
+}
+.no-scroll::-webkit-scrollbar-thumb {
+  background-color: #111317;
+  border-radius: 4px;
+}
