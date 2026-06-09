@@ -11,39 +11,31 @@
     let blur = false;
     let varName = "";
     let varValue = "";
-    let varType = "application";
     let submitting = false;
 
     function initialte_adding_variables() {
       varName = "";
       varValue = "";
-      varType = "application";
       submitting = false;
       blur = true;
       console.log("Enabling Blur");
     }
     async function handleSubmit(event) {
       event.preventDefault();
-      console.log("Form submitted:", { varName, varValue, varType });
+      console.log("Form submitted:", { varName, varValue });
       
-      if (varType === "user") {
-        submitting = true;
-        try {
-          console.log("[Frontend] Invoking backend add_user_env_var...");
-          const success = await invoke("add_user_env_var", { key: varName, value: varValue });
-          console.log("[Frontend] add_user_env_var response:", success);
-          if (success) {
-            blur = false;
-          }
-        } catch (error) {
-          console.log("[Frontend] Error adding user environment variable:", error);
-        } finally {
-          submitting = false;
+      submitting = true;
+      try {
+        console.log("[Frontend] Invoking backend add_user_env_var...");
+        const success = await invoke("add_user_env_var", { key: varName, value: varValue });
+        console.log("[Frontend] add_user_env_var response:", success);
+        if (success) {
+          blur = false;
         }
-      } else {
-        // If type is application, we just close the modal (user handles backend)
-        console.log("[Frontend] Application variable submission triggered (close modal).");
-        blur = false;
+      } catch (error) {
+        console.log("[Frontend] Error adding user environment variable:", error);
+      } finally {
+        submitting = false;
       }
     }
 </script>
@@ -160,28 +152,6 @@
               class="w-full bg-[#111317] border border-white/10 text-white placeholder-gray-500 rounded-md focus:ring-[#72ddc3] focus:border-[#72ddc3] p-2.5"
             />
           </div>
-
-          <div class="space-y-2">
-            <Label class="block text-sm font-medium text-gray-300">Variable Type</Label>
-            <div class="flex gap-6 p-3 bg-[#111317] border border-white/10 rounded-md">
-              <Radio 
-                name="var-type" 
-                value="application" 
-                bind:group={varType} 
-                class="text-[#72ddc3] focus:ring-[#72ddc3] cursor-pointer"
-              >
-                <span class="ml-2 text-sm text-gray-300 font-medium cursor-pointer">Application</span>
-              </Radio>
-              <Radio 
-                name="var-type" 
-                value="user" 
-                bind:group={varType} 
-                class="text-[#72ddc3] focus:ring-[#72ddc3] cursor-pointer"
-              >
-                <span class="ml-2 text-sm text-gray-300 font-medium cursor-pointer">User</span>
-              </Radio>
-            </div>
-          </div>
         </div>
 
         {#snippet footer()}
@@ -193,31 +163,17 @@
             >
               Cancel
             </Button>
-            {#if varType === 'application'}
-              <Button 
-                type="submit" 
-                disabled={submitting}
-                class="bg-[#72ddc3] hover:bg-[#5ec4ad] text-black font-semibold px-5 cursor-pointer flex items-center justify-center min-w-[120px]"
-              >
-                {#if submitting}
-                  <Spinner size="4" color="current" />
-                {:else}
-                  Open Terminal
-                {/if}
-              </Button>
-            {:else}
-              <Button 
-                type="submit" 
-                disabled={submitting}
-                class="bg-[#72ddc3] hover:bg-[#5ec4ad] text-black font-semibold px-5 cursor-pointer flex items-center justify-center min-w-[80px]"
-              >
-                {#if submitting}
-                  <Spinner size="4" color="current" />
-                {:else}
-                  Load
-                {/if}
-              </Button>
-            {/if}
+            <Button 
+              type="submit" 
+              disabled={submitting}
+              class="bg-[#72ddc3] hover:bg-[#5ec4ad] text-black font-semibold px-5 cursor-pointer flex items-center justify-center min-w-[80px]"
+            >
+              {#if submitting}
+                <Spinner size="4" color="current" />
+              {:else}
+                Load
+              {/if}
+            </Button>
           </div>
         {/snippet}
       </Modal>
