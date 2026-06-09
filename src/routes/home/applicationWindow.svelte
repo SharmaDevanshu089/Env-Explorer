@@ -93,19 +93,21 @@
   <main>
     <ApplicationTitlebar />
     <div class="content">
+    <!-- TODO: Fix colors -->
     {#if blur}
       <Modal 
         form 
         bind:open={blur} 
         outsideclose={false} 
         onsubmit={handleSubmit}
-        class="backdrop:bg-black/60"
-        bodyClass="p-6 space-y-6 bg-[#16181d] rounded-lg border border-white/10"
+        class="!bg-[#111317] !dark:bg-[#111317] border border-white/10 rounded-lg shadow-xl backdrop:bg-black/60 text-white"
+        bodyClass="p-6 space-y-6 !bg-[#111317] rounded-lg"
         dialogClass="fixed top-0 start-0 end-0 h-modal md:h-full w-full inset-0 z-50 flex items-center justify-center p-4"
+        closeBtnClass="text-gray-400 hover:text-white cursor-pointer absolute top-4 end-4"
       >
         {#snippet header()}
           <div class="flex items-center gap-2">
-            <div class="p-1.5 bg-[#72ddc3]/10 text-[#72ddc3] rounded">
+            <div class="p-1.5 bg-[#111317]/10 text-[#72ddc3] rounded">
               <Icon name="add" size={20} strokeWidth={2} />
             </div>
             <h3 class="text-xl font-semibold text-white">Load New Environment Variable</h3>
@@ -121,7 +123,7 @@
               placeholder="e.g. DATABASE_URL" 
               bind:value={varName} 
               required 
-              class="w-full bg-[#1e222b] border border-white/10 text-white placeholder-gray-500 rounded-md focus:ring-[#72ddc3] focus:border-[#72ddc3] p-2.5"
+              class="w-full bg-[#111317] border border-white/10 text-white placeholder-gray-500 rounded-md focus:ring-[#72ddc3] focus:border-[#72ddc3] p-2.5"
             />
           </div>
 
@@ -133,28 +135,28 @@
               placeholder="e.g. postgresql://user:pass@localhost:5432/db" 
               bind:value={varValue} 
               required 
-              class="w-full bg-[#1e222b] border border-white/10 text-white placeholder-gray-500 rounded-md focus:ring-[#72ddc3] focus:border-[#72ddc3] p-2.5"
+              class="w-full bg-[#111317] border border-white/10 text-white placeholder-gray-500 rounded-md focus:ring-[#72ddc3] focus:border-[#72ddc3] p-2.5"
             />
           </div>
 
           <div class="space-y-2">
             <Label class="block text-sm font-medium text-gray-300">Variable Type</Label>
-            <div class="flex gap-6 p-3 bg-[#1e222b] border border-white/10 rounded-md">
+            <div class="flex gap-6 p-3 bg-[#111317] border border-white/10 rounded-md">
               <Radio 
                 name="var-type" 
                 value="application" 
                 bind:group={varType} 
-                class="text-[#72ddc3] focus:ring-[#72ddc3]"
+                class="text-[#72ddc3] focus:ring-[#72ddc3] cursor-pointer"
               >
-                <span class="ml-2 text-sm text-gray-300 font-medium">Application</span>
+                <span class="ml-2 text-sm text-gray-300 font-medium cursor-pointer">Application</span>
               </Radio>
               <Radio 
                 name="var-type" 
                 value="user" 
                 bind:group={varType} 
-                class="text-[#72ddc3] focus:ring-[#72ddc3]"
+                class="text-[#72ddc3] focus:ring-[#72ddc3] cursor-pointer"
               >
-                <span class="ml-2 text-sm text-gray-300 font-medium">User</span>
+                <span class="ml-2 text-sm text-gray-300 font-medium cursor-pointer">User</span>
               </Radio>
             </div>
           </div>
@@ -165,21 +167,21 @@
             <Button 
               color="alternative" 
               onclick={() => blur = false}
-              class="bg-transparent border border-white/10 hover:bg-white/5 text-gray-300 hover:text-white"
+              class="bg-transparent border border-white/10 hover:bg-white/5 text-gray-300 hover:text-white cursor-pointer"
             >
               Cancel
             </Button>
             {#if varType === 'application'}
               <Button 
                 type="submit" 
-                class="bg-[#72ddc3] hover:bg-[#5ec4ad] text-black font-semibold px-5"
+                class="bg-[#72ddc3] hover:bg-[#5ec4ad] text-black font-semibold px-5 cursor-pointer"
               >
                 Open Terminal
               </Button>
             {:else}
               <Button 
                 type="submit" 
-                class="bg-[#72ddc3] hover:bg-[#5ec4ad] text-black font-semibold px-5"
+                class="bg-[#72ddc3] hover:bg-[#5ec4ad] text-black font-semibold px-5 cursor-pointer"
               >
                 Load
               </Button>
@@ -216,6 +218,24 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
   @import "../component/sidebar.css";
+
+  :global(button), :global(input[type="radio"]), :global(label), :global(.cursor-pointer) {
+    cursor: pointer !important;
+  }
+
+  :global(dialog), :global(dialog form) {
+    background: #111317 !important;
+    background-color: #111317 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+
+  :global(dialog *), :global(dialog div) {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  :global(dialog button) {
+    cursor: pointer !important;
+  }
 
   .shell {
     display: grid;
