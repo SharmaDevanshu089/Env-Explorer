@@ -4,9 +4,26 @@
     import ProjectWindow from "./windows/projectWindow.svelte"
     import AnalyticWindow from "./windows/analyticWindow.svelte"
     import BulkWindow from "./windows/bulkWindow.svelte"
+    import { Modal, Button, Label, Input, Radio } from 'flowbite-svelte';
 
     let active = "projects";
     let blur = false;
+    let varName = "";
+    let varValue = "";
+    let varType = "application";
+
+    function initialte_adding_variables() {
+      varName = "";
+      varValue = "";
+      varType = "application";
+      blur = true;
+      console.log("Enabling Blur");
+    }
+    function handleSubmit(event) {
+      event.preventDefault();
+      console.log("Form submitted:", { varName, varValue, varType });
+      blur = false;
+    }
 </script>
 <div class="shell">
   <aside class="sidebar" data-tauri-drag-region>
@@ -21,7 +38,7 @@
         </div>
     </header>
 
-    <button class="create-btn">
+    <button class="create-btn" on:click={() => initialte_adding_variables()}>
         <Icon name="add" size={16} strokeWidth={2.5} />
         New Variable
     </button>
@@ -77,6 +94,99 @@
     <ApplicationTitlebar />
     <div class="content">
     {#if blur}
+      <Modal 
+        form 
+        bind:open={blur} 
+        outsideclose={false} 
+        onsubmit={handleSubmit}
+        class="backdrop:bg-black/60"
+        bodyClass="p-6 space-y-6 bg-[#16181d] rounded-lg border border-white/10"
+        dialogClass="fixed top-0 start-0 end-0 h-modal md:h-full w-full inset-0 z-50 flex items-center justify-center p-4"
+      >
+        {#snippet header()}
+          <div class="flex items-center gap-2">
+            <div class="p-1.5 bg-[#72ddc3]/10 text-[#72ddc3] rounded">
+              <Icon name="add" size={20} strokeWidth={2} />
+            </div>
+            <h3 class="text-xl font-semibold text-white">Load New Environment Variable</h3>
+          </div>
+        {/snippet}
+
+        <div class="space-y-4">
+          <div>
+            <Label for="var-name" class="block mb-2 text-sm font-medium text-gray-300">Variable Name</Label>
+            <Input 
+              id="var-name" 
+              type="text" 
+              placeholder="e.g. DATABASE_URL" 
+              bind:value={varName} 
+              required 
+              class="w-full bg-[#1e222b] border border-white/10 text-white placeholder-gray-500 rounded-md focus:ring-[#72ddc3] focus:border-[#72ddc3] p-2.5"
+            />
+          </div>
+
+          <div>
+            <Label for="var-value" class="block mb-2 text-sm font-medium text-gray-300">Variable Value</Label>
+            <Input 
+              id="var-value" 
+              type="text" 
+              placeholder="e.g. postgresql://user:pass@localhost:5432/db" 
+              bind:value={varValue} 
+              required 
+              class="w-full bg-[#1e222b] border border-white/10 text-white placeholder-gray-500 rounded-md focus:ring-[#72ddc3] focus:border-[#72ddc3] p-2.5"
+            />
+          </div>
+
+          <div class="space-y-2">
+            <Label class="block text-sm font-medium text-gray-300">Variable Type</Label>
+            <div class="flex gap-6 p-3 bg-[#1e222b] border border-white/10 rounded-md">
+              <Radio 
+                name="var-type" 
+                value="application" 
+                bind:group={varType} 
+                class="text-[#72ddc3] focus:ring-[#72ddc3]"
+              >
+                <span class="ml-2 text-sm text-gray-300 font-medium">Application</span>
+              </Radio>
+              <Radio 
+                name="var-type" 
+                value="user" 
+                bind:group={varType} 
+                class="text-[#72ddc3] focus:ring-[#72ddc3]"
+              >
+                <span class="ml-2 text-sm text-gray-300 font-medium">User</span>
+              </Radio>
+            </div>
+          </div>
+        </div>
+
+        {#snippet footer()}
+          <div class="flex justify-end gap-3 w-full border-t border-white/5 pt-4">
+            <Button 
+              color="alternative" 
+              onclick={() => blur = false}
+              class="bg-transparent border border-white/10 hover:bg-white/5 text-gray-300 hover:text-white"
+            >
+              Cancel
+            </Button>
+            {#if varType === 'application'}
+              <Button 
+                type="submit" 
+                class="bg-[#72ddc3] hover:bg-[#5ec4ad] text-black font-semibold px-5"
+              >
+                Open Terminal
+              </Button>
+            {:else}
+              <Button 
+                type="submit" 
+                class="bg-[#72ddc3] hover:bg-[#5ec4ad] text-black font-semibold px-5"
+              >
+                Load
+              </Button>
+            {/if}
+          </div>
+        {/snippet}
+      </Modal>
       <div class="blur-overlay">
         {#if active === "projects"}
           <ProjectWindow />
@@ -130,5 +240,9 @@
     /* overflow-y: auto; */
     color: #fff;
     background-color: transparent;
+  }
+  .blur-overlay{
+    filter: blur(6px);
+    pointer-events: none;
   }
 </style>
