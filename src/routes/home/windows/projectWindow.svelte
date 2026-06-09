@@ -51,8 +51,8 @@
     }
 
 
-    async function handleLoadEnv(env) {
-        console.log(`[Frontend] User clicked 'Load' button for project: ${env.name} (Path: ${env.path})`);
+    async function handleLaunchTerminal(env) {
+        console.log(`[Frontend] User clicked 'Terminal' button for project: ${env.name} (Path: ${env.path})`);
 
         const targetIndex = env_data.findIndex(item => item.path === env.path);
         if (targetIndex === -1) {
@@ -65,21 +65,14 @@
         env_data = [...env_data]; // Trigger reactivity
 
         try {
-            console.log(`[Frontend] Starting simulated delay of 600ms to visualize spinner...`);
-            await new Promise(resolve => setTimeout(resolve, 600));
+            console.log(`[Frontend] Starting simulated delay of 400ms to visualize spinner...`);
+            await new Promise(resolve => setTimeout(resolve, 400));
 
-            console.log(`[Frontend] Invoking backend 'load_env_to_system_process' command with path: ${env.path}`);
-            const success = await invoke("load_env_to_system_process", { path: env.path });
+            console.log(`[Frontend] Invoking backend 'launch_terminal_with_env' command with path: ${env.path}`);
+            const success = await invoke("launch_terminal_with_env", { path: env.path });
             console.log(`[Frontend] Backend command returned result: ${success}`);
-
-            if (success) {
-                console.log(`[Frontend] Loading succeeded! Setting loaded = true and disabling button for: ${env.name}`);
-                env_data[targetIndex].loaded = true;
-            } else {
-                console.warn(`[Frontend] Loading returned false (non-success status) for: ${env.name}`);
-            }
         } catch (error) {
-            console.error(`[Frontend] Exception occurred during invoke('load_env_to_system_process'):`, error);
+            console.error(`[Frontend] Exception occurred during invoke('launch_terminal_with_env'):`, error);
         } finally {
             console.log(`[Frontend] Resetting loading state to false for project: ${env.name}`);
             env_data[targetIndex].loading = false;
@@ -122,16 +115,14 @@
                         </div>
                         <Button 
                             size="xs" 
-                            disabled={env.loading || env.loaded}
-                            onclick={() => handleLoadEnv(env)}
-                            class="bg-[#72ddc3]/10 text-[#72ddc3] border border-[#72ddc3]/20 hover:bg-[#72ddc3] hover:text-black transition-all w-24 flex items-center justify-center"
+                            disabled={env.loading}
+                            onclick={() => handleLaunchTerminal(env)}
+                            class="bg-[#72ddc3]/10 text-[#72ddc3] border border-[#72ddc3]/20 hover:bg-[#72ddc3] hover:text-black transition-all w-32 flex items-center justify-center"
                         >
                             {#if env.loading}
                                 <Spinner size="4" color="white" />
-                            {:else if env.loaded}
-                                Loaded
                             {:else}
-                                Load {#if env.count !== undefined}({env.count}){/if}
+                                Terminal {#if env.count !== undefined}({env.count}){/if}
                             {/if}
                         </Button>
                     </div>
