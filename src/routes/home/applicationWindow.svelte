@@ -4,25 +4,47 @@
     import ProjectWindow from "./windows/projectWindow.svelte"
     import AnalyticWindow from "./windows/analyticWindow.svelte"
     import BulkWindow from "./windows/bulkWindow.svelte"
-    import { Modal, Button, Label, Input, Radio } from 'flowbite-svelte';
+    import { Modal, Button, Label, Input, Radio, Spinner } from 'flowbite-svelte';
+    import { invoke } from "@tauri-apps/api/core";
 
     let active = "projects";
     let blur = false;
     let varName = "";
     let varValue = "";
     let varType = "application";
+    let submitting = false;
 
     function initialte_adding_variables() {
       varName = "";
       varValue = "";
       varType = "application";
+      submitting = false;
       blur = true;
       console.log("Enabling Blur");
     }
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
       event.preventDefault();
       console.log("Form submitted:", { varName, varValue, varType });
-      blur = false;
+      
+      if (varType === "user") {
+        submitting = true;
+        try {
+          console.log("[Frontend] Invoking backend add_user_env_var...");
+          const success = await invoke("add_user_env_var", { key: varName, value: varValue });
+          console.log("[Frontend] add_user_env_var response:", success);
+          if (success) {
+            blur = false;
+          }
+        } catch (error) {
+          console.log("[Frontend] Error adding user environment variable:", error);
+        } finally {
+          submitting = false;
+        }
+      } else {
+        // If type is application, we just close the modal (user handles backend)
+        console.log("[Frontend] Application variable submission triggered (close modal).");
+        blur = false;
+      }
     }
 </script>
 <div class="shell">
@@ -174,16 +196,26 @@
             {#if varType === 'application'}
               <Button 
                 type="submit" 
-                class="bg-[#72ddc3] hover:bg-[#5ec4ad] text-black font-semibold px-5 cursor-pointer"
+                disabled={submitting}
+                class="bg-[#72ddc3] hover:bg-[#5ec4ad] text-black font-semibold px-5 cursor-pointer flex items-center justify-center min-w-[120px]"
               >
-                Open Terminal
+                {#if submitting}
+                  <Spinner size="4" color="current" />
+                {:else}
+                  Open Terminal
+                {/if}
               </Button>
             {:else}
               <Button 
                 type="submit" 
-                class="bg-[#72ddc3] hover:bg-[#5ec4ad] text-black font-semibold px-5 cursor-pointer"
+                disabled={submitting}
+                class="bg-[#72ddc3] hover:bg-[#5ec4ad] text-black font-semibold px-5 cursor-pointer flex items-center justify-center min-w-[80px]"
               >
-                Load
+                {#if submitting}
+                  <Spinner size="4" color="current" />
+                {:else}
+                  Load
+                {/if}
               </Button>
             {/if}
           </div>
