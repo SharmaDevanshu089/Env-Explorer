@@ -6,6 +6,7 @@
     import BulkWindow from "./windows/bulkWindow.svelte"
 
     let active = "projects";
+    let blur = false;
 </script>
 <div class="shell">
   <aside class="sidebar" data-tauri-drag-region>
@@ -75,15 +76,31 @@
   <main>
     <ApplicationTitlebar />
     <div class="content">
-      {#if active === "projects"}
-        <ProjectWindow />
-      {:else if active === "recent"}
-        <AnalyticWindow />
-      {:else if active === "keys"}
-        <BulkWindow />
-      {/if}
+    {#if blur}
+      <div class="blur-overlay">
+        {#if active === "projects"}
+          <ProjectWindow />
+        {:else if active === "recent"}
+          <AnalyticWindow />
+        {:else if active === "keys"}
+          <BulkWindow />
+        {/if}
+      </div>
+    {:else}
+
+      <div class="no-blur-overlay">
+        {#if active === "projects"}
+          <ProjectWindow />
+        {:else if active === "recent"}
+          <AnalyticWindow />
+        {:else if active === "keys"}
+          <BulkWindow />
+        {/if}
+      </div>
+    {/if}
     </div>
   </main>
+  
 </div>
 
 <style>
