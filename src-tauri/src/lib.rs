@@ -2,6 +2,7 @@ pub mod crawl;
 pub mod reader;
 pub mod syshandler;
 pub mod terminal;
+pub mod envirment;
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
@@ -13,7 +14,8 @@ pub fn run() {
             reader::read_env_config,
             crawl::intiate_crawl,
             syshandler::load_env_to_system_process,
-            terminal::launch_terminal_with_env
+            terminal::launch_terminal_with_env,
+            envirment::add_user_env_var
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
