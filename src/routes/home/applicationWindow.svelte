@@ -1,3 +1,4 @@
+<!-- Fix the sidebar windows name to analyctics and bulk change -->
 <script>
     import ApplicationTitlebar from '../component/titlebar.svelte';
     import Icon from '../component/Icon.svelte';
