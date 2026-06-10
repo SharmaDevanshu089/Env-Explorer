@@ -1,4 +1,4 @@
-<!-- Fix the sidebar windows name to analyctics and bulk change -->
+<!-- Sidebar with Project, Analytics, and Bulk Change windows -->
 <script>
     import ApplicationTitlebar from '../component/titlebar.svelte';
     import Icon from '../component/Icon.svelte';
@@ -70,20 +70,20 @@
 
         <button
             class="nav-item"
-            class:active={active === 'recent'}
-            on:click={() => active = 'recent'}
+            class:active={active === 'analytics'}
+            on:click={() => active = 'analytics'}
         >
-            <Icon name="history" />
-            Recent
+            <Icon name="analytics" />
+            Analytics
         </button>
 
         <button
             class="nav-item"
-            class:active={active === 'keys'}
-            on:click={() => active = 'keys'}
+            class:active={active === 'bulk'}
+            on:click={() => active = 'bulk'}
         >
-            <Icon name="key" />
-            Global Keys
+            <Icon name="bulk" />
+            Bulk Change
         </button>
     </nav>
 
@@ -181,9 +181,9 @@
       <div class="blur-overlay">
         {#if active === "projects"}
           <ProjectWindow />
-        {:else if active === "recent"}
+        {:else if active === "analytics"}
           <AnalyticWindow />
-        {:else if active === "keys"}
+        {:else if active === "bulk"}
           <BulkWindow />
         {/if}
       </div>
@@ -192,9 +192,9 @@
       <div class="no-blur-overlay">
         {#if active === "projects"}
           <ProjectWindow />
-        {:else if active === "recent"}
+        {:else if active === "analytics"}
           <AnalyticWindow />
-        {:else if active === "keys"}
+        {:else if active === "bulk"}
           <BulkWindow />
         {/if}
       </div>
