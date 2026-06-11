@@ -1,7 +1,8 @@
 <script>
     import { invoke } from "@tauri-apps/api/core";
     import { onMount } from "svelte";
-    // Funtion to get total number of Variables
+    
+
     let variable_count = 0;
     let env_files = [];
     let count = 0;
@@ -23,7 +24,23 @@
         console.log(count);
     }
 
-
+    /**
+     * Load ->
+     * Look for a file
+     * loop start, file 1, var 1
+     * select first variable in file
+     * new loop 
+     * look file 1, search variable
+     * then file 2 ..
+     * update count
+     * end loop
+     * select 2nd variable in file
+     * do as above
+     * do all variable
+     * file 2 variable one
+     * do all files
+     * end and return count
+    */
     onMount(async () => {get_env_list();});    
 </script>
 
