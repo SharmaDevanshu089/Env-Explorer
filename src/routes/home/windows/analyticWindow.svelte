@@ -5,7 +5,7 @@
 
     let variable_count = 0;
     let env_files = [];
-    let count = 0;
+    let total_variable_count = 0;
     async function get_env_list() {
         try{
             let reading_from_os = await invoke("read_env_config");
@@ -16,12 +16,22 @@
             console.log(error);
         }
         for (const file of env_files) {
-            console.log(file.name);
+            // console.log(file.name);
             let no_of_env_variables = await invoke("count_env_vars", { path: file.path });
-            console.log(no_of_env_variables);
-            count = count + no_of_env_variables;
+            // console.log(no_of_env_variables);
+            total_variable_count = total_variable_count + no_of_env_variables;
         }
-        console.log(count);
+        // console.log(total_variable_count);
+    }
+
+    async function scan_all_files_and_return_total_count() {
+        console.clear();
+        for (const file of env_files) {
+            // need to get variable list
+            console.log(total_variable_count);
+            let variables_in_current_file = await invoke("get_current_env_vars", {path: file.path});
+            console.log(variables_in_current_file);
+        }
     }
 
     /**
@@ -41,7 +51,10 @@
      * do all files
      * end and return count
     */
-    onMount(async () => {get_env_list();});    
+    onMount(async () => {
+        get_env_list();
+        scan_all_files_and_return_total_count();
+    });    
 </script>
 
 <div>
