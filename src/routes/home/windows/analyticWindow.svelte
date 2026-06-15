@@ -22,6 +22,9 @@
             total_variable_count = total_variable_count + no_of_env_variables;
         }
         // this is being printed that means function is probably ending
+
+        // why is this being called every envirment
+        // Update: it Wasnt , i was just logging it : )
         console.log(total_variable_count);
     }
 
@@ -32,7 +35,7 @@
         // console.clear();
         for (const file of env_files) {
             // need to get variable list
-            console.log(total_variable_count);
+            // console.log(total_variable_count);
             let variables_in_current_file = await invoke(
                 "get_current_env_vars",
                 { path: file.path },
