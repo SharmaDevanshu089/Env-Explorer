@@ -5,6 +5,8 @@
     let variable_count = 0;
     let env_files = [];
     let total_variable_count = 0;
+    let master_envirment_list = [];
+
     async function get_env_list() {
         try {
             let reading_from_os = await invoke("read_env_config");
@@ -26,6 +28,24 @@
         // why is this being called every envirment
         // Update: it Wasnt , i was just logging it : )
         console.log(total_variable_count);
+    }
+
+    async function initiate_giant_pile() {
+        for (const file of env_files) {
+            let variables_in_current_file = await invoke(
+                "get_current_env_vars",
+                { path: file.path },
+            );
+
+            for (let envirment_variable in variables_in_current_file) {
+                // How is only key being printited here
+
+                // console.log(envirment_variable);
+                // Answer: Javascript only iterates over keys, this just got 100,000 times easier
+                master_envirment_list.push(envirment_variable);
+            }
+            // console.log(variables_in_current_file);
+        }
     }
 
     async function scan_all_files_and_return_total_count() {
@@ -76,7 +96,9 @@
     onMount(async () => {
         console.clear();
         await get_env_list();
-        scan_all_files_and_return_total_count();
+        await initiate_giant_pile();
+        console.log(master_envirment_list);
+        // scan_all_files_and_return_total_count();
     });
 </script>
 
