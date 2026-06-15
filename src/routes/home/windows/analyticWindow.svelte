@@ -2,12 +2,17 @@
     import { invoke } from "@tauri-apps/api/core";
     import { onMount } from "svelte";
 
+    // Tells the maximum number of Items to be Added In the bar chart and the cutoff value
+    const MAX_CHART_VALUE = 10;
+    const CLAMP_VALUE = 0;
+
     let variable_count = 0;
     let env_files = [];
     let total_variable_count = 0;
     let master_envirment_list = [];
     let final_master_envirment_count_list = {};
     let temp_array = {};
+    let cleanlist = {};
 
     async function get_env_list() {
         try {
@@ -96,6 +101,35 @@
         console.log(final_master_envirment_count_list);
     }
 
+    async function build_clean_list() {
+        // There is something seriously wrong here, the length value is overly inflated idk
+        // But it is bit smaller then the garbage_pile value
+        // I think it is including both the copunt and name of variable in there
+        console.log("Length = " + temp_array.length);
+
+        // We make sure cleanlist starts totally empty
+        cleanlist = {};
+
+        // Use .entries() to get the index and the card at the same time
+        for (let [index, card] of temp_array.entries()) {
+            // 1. Enforce the limit: If index hits 10, destroy the loop!
+            if (index >= MAX_CHART_VALUE) {
+                break;
+            }
+
+            let variableName = card[0];
+            let variableCount = card[1];
+
+            // 2. Enforce the clamp: Only add it if it's greater than CLAMP_VALUE
+            if (variableCount > CLAMP_VALUE) {
+                // Write it onto our clean, final scoreboard
+                cleanlist[variableName] = variableCount;
+            }
+        }
+
+        console.log("Final Clean Dashboard Data:", cleanlist);
+    }
+
     /**
      * Load ->
      * Look for a file
@@ -128,8 +162,8 @@
         await initiate_giant_pile();
         await implement_count();
         await sort();
-        console.log(final_master_envirment_count_list);
-        console.log(temp_array);
+        // console.log(final_master_envirment_count_list);
+        await build_clean_list();
         // scan_all_files_and_return_total_count();
     });
 </script>
