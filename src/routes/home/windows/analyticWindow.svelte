@@ -7,6 +7,7 @@
     let total_variable_count = 0;
     let master_envirment_list = [];
     let final_master_envirment_count_list = {};
+    let temp_array = {};
 
     async function get_env_list() {
         try {
@@ -80,6 +81,21 @@
         }
     }
 
+    async function sort() {
+        temp_array = Object.entries(final_master_envirment_count_list);
+
+        temp_array.sort(function (cardA, cardB) {
+            // Remember, on our card: position [0] is the Name, position [1] is the Number
+            let numberA = cardA[1];
+            let numberB = cardB[1];
+
+            // By subtracting A from B, we tell the machine: "Biggest numbers go first!"
+            return numberB - numberA;
+        });
+        final_master_envirment_count_list = Object.fromEntries(temp_array);
+        console.log(final_master_envirment_count_list);
+    }
+
     /**
      * Load ->
      * Look for a file
@@ -111,7 +127,9 @@
         await get_env_list();
         await initiate_giant_pile();
         await implement_count();
+        await sort();
         console.log(final_master_envirment_count_list);
+        console.log(temp_array);
         // scan_all_files_and_return_total_count();
     });
 </script>
