@@ -1,35 +1,45 @@
 <script>
     import { invoke } from "@tauri-apps/api/core";
     import { onMount } from "svelte";
-    
 
     let variable_count = 0;
     let env_files = [];
     let total_variable_count = 0;
     async function get_env_list() {
-        try{
+        try {
             let reading_from_os = await invoke("read_env_config");
-            console.log(reading_from_os);   
+            console.log(reading_from_os);
             env_files = reading_from_os;
-        }
-        catch (error){
+        } catch (error) {
             console.log(error);
         }
         for (const file of env_files) {
             // console.log(file.name);
-            let no_of_env_variables = await invoke("count_env_vars", { path: file.path });
+            let no_of_env_variables = await invoke("count_env_vars", {
+                path: file.path,
+            });
             // console.log(no_of_env_variables);
             total_variable_count = total_variable_count + no_of_env_variables;
         }
-        // console.log(total_variable_count);
+        // this is being printed that means function is probably ending
+        console.log(total_variable_count);
     }
 
     async function scan_all_files_and_return_total_count() {
-        console.clear();
+        // mybe this function is not being called
+        // Update: this funtion is being called befor ethe get_env_list, ok maybe i should use await
+        console.log("scan_all_files_and_return_total_count got called");
+        // console.clear();
         for (const file of env_files) {
             // need to get variable list
             console.log(total_variable_count);
-            let variables_in_current_file = await invoke("get_current_env_vars", {path: file.path});
+            let variables_in_current_file = await invoke(
+                "get_current_env_vars",
+                { path: file.path },
+            );
+            // why is this friking not working?
+            // above funtion is not called
+            // Udpate: Fixed the issue
             console.log(variables_in_current_file);
         }
     }
@@ -39,7 +49,7 @@
      * Look for a file
      * loop start, file 1, var 1
      * select first variable in file
-     * new loop 
+     * new loop
      * look file 1, search variable
      * then file 2 ..
      * update count
@@ -50,11 +60,21 @@
      * file 2 variable one
      * do all files
      * end and return count
-    */
+     *
+     * Update , now i am thinking of the vomit method
+     * Load all file names to a single Object
+     * Use Object[item] = undifined to check if it exists
+     * if it doesnt, update the count to 1
+     * if it does exist , set it to count + 1
+     * then move to next variable
+     * and do this till eternity
+     *
+     */
     onMount(async () => {
-        get_env_list();
+        console.clear();
+        await get_env_list();
         scan_all_files_and_return_total_count();
-    });    
+    });
 </script>
 
 <div>
