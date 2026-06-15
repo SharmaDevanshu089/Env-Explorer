@@ -8,6 +8,7 @@
  
     let state = "loading" ;
     let loadingtext = "Scanning...";
+    /** @type {any[]} */
     let env_data = [];
     
     async function first_update() {
@@ -51,6 +52,7 @@
     }
 
 
+    /** @param {any} env */
     async function handleLaunchTerminal(env) {
         console.log(`[Frontend] User clicked 'Terminal' button for project: ${env.name} (Path: ${env.path})`);
 
@@ -90,37 +92,37 @@
     {#if state === "loading"}
     <!-- Keep this div full seze of avilable space and make it center i need spinner in center -->
     <div class="flex flex-col justify-center items-center w-full h-[calc(100vh-88px)]">
-        <Spinner type="bars" color="#72ddc3" size="16"/>
-        <span class="text-white mt-2">{loadingtext}</span>
+        <Spinner type="bars" color="green" size="16"/>
+        <span class="text-[var(--retro-neon)] mt-4 font-bold uppercase tracking-widest">{loadingtext}</span>
     </div>
     {/if}
     {#if state === "loaded"}
         <div class="flex flex-col gap-3 w-full max-w-7xl mx-auto p-2 pl-15 pr-15">
-            <div class="flex justify-between items-center mb-2 border-b border-white/5 pb-3">
+            <div class="flex justify-between items-center mb-2 border-b-2 border-[var(--retro-neon)] pb-3">
                 <div class="p-2">
-                    <h2 class="text-4xl font-semibold text-white pt-8">Projects</h2>
-                    <p class="text-lg text-gray-400 ">Environment configurations found on your system</p>
+                    <h2 class="text-4xl font-bold text-[var(--retro-neon)] uppercase tracking-wider drop-shadow-[2px_2px_0px_rgba(57,255,20,0.5)] pt-8">Projects</h2>
+                    <p class="text-lg text-[var(--retro-neon)]/70 uppercase font-bold mt-2">Environment configurations found on your system</p>
                 </div>
-                <span class="text-xs px-2.5 py-1 bg-[#72ddc3]/10 text-[#72ddc3] rounded-full border border-[#72ddc3]/20 font-medium">
+                <span class="text-xs px-2.5 py-1 bg-[var(--retro-neon)]/10 text-[var(--retro-neon)] rounded-none border-2 border-[var(--retro-neon)] font-bold uppercase shadow-[2px_2px_0px_0px_var(--retro-neon)]">
                     {env_data.length} Found
                 </span>
             </div>
             
-            <div class="no-scroll flex flex-col gap-2 overflow-y-auto max-h-[calc(100vh-200px)]">
+            <div class="no-scroll flex flex-col gap-4 overflow-y-auto max-h-[calc(100vh-200px)] p-2">
                 {#each env_data as env}
-                    <div class="flex justify-between items-center p-4 bg-[#111317] rounded-lg border border-white/5 hover:border-[#72ddc3]/30 transition-all duration-200">
+                    <div class="flex justify-between items-center p-4 bg-[var(--retro-panel)] rounded-none border-2 border-[var(--retro-neon)] shadow-[4px_4px_0px_0px_var(--retro-neon)] transition-all duration-100">
                         <div class="flex flex-col gap-1">
-                            <h5 class="text-sm font-semibold text-white">{env.name}</h5>
-                            <p class="text-xs text-gray-400 font-mono select-all">{env.path}</p>
+                            <h5 class="text-sm font-bold text-[var(--retro-neon)] uppercase tracking-wide">{env.name}</h5>
+                            <p class="text-xs text-[var(--retro-neon)]/70 font-mono select-all">{env.path}</p>
                         </div>
                         <Button 
                             size="xs" 
                             disabled={env.loading}
                             onclick={() => handleLaunchTerminal(env)}
-                            class="bg-[#72ddc3]/10 text-[#72ddc3] border border-[#72ddc3]/20 hover:bg-[#72ddc3] hover:text-black transition-all w-32 flex items-center justify-center"
+                            class="bg-transparent text-[var(--retro-neon)] border-2 border-[var(--retro-neon)] hover:bg-[var(--retro-neon)] hover:text-black rounded-none shadow-[2px_2px_0px_0px_var(--retro-neon)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] uppercase font-bold transition-none w-32 flex items-center justify-center"
                         >
                             {#if env.loading}
-                                <Spinner size="4" color="white" />
+                                <Spinner size="4" color="green" />
                             {:else}
                                 Terminal {#if env.count !== undefined}({env.count}){/if}
                             {/if}

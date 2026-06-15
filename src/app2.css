@@ -1,16 +1,22 @@
+:root {
+  --retro-bg: #1a0f00;
+  --retro-panel: #241600;
+  --retro-neon: #39ff14;
+  --retro-neon-dim: rgba(57, 255, 20, 0.2);
+  --retro-border: #39ff14;
+  --retro-text: #39ff14;
+}
 
 .no-scroll::-webkit-scrollbar {
   width: 8px;        
-  color:#111317 ;    
 }
 .no-scroll::-webkit-scrollbar-track {
-  background: transparent; 
+  background: var(--retro-panel); 
+  border-left: 1px solid var(--retro-neon-dim);
 }
 .no-scroll::-webkit-scrollbar-thumb {
-  background-color: #111317;
-  border-radius: 4px;
-      border-style: var(oklab(0.999994 0.0000455678 0.0000200868 / 0.05));
-    border-width: 1px;
+  background-color: var(--retro-neon);
+  border-radius: 0px;
 }
 .no-scroll{
   padding-right: 5px;

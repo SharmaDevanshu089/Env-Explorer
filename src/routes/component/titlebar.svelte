@@ -52,7 +52,7 @@
   <!-- Left: App identity -->
   <div class="titlebar__left" data-tauri-drag-region>
     <div class="titlebar__app-icon">
-      <!-- Icon placeholder -->
+      [ ENV ]
     </div>
   </div>
 
@@ -65,9 +65,7 @@
       aria-label="Refresh"
       title="Refresh"
     >
-      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13.65 2.35A7.958 7.958 0 0 0 8 0a8 8 0 1 0 8 8h-2a6 6 0 1 1-1.76-4.24L10 6h6V0l-2.35 2.35z" fill="currentColor"/>
-      </svg>
+      R
     </button>
 
     <div class="titlebar__separator"></div>
@@ -80,10 +78,7 @@
         aria-label="Minimize"
         title="Minimize"
       >
-        <!-- Minimize Icon -->
-        <svg width="10" height="10" viewBox="0 0 10 1" xmlns="http://www.w3.org/2000/svg">
-          <rect width="10" height="1" fill="currentColor" />
-        </svg>
+        _
       </button>
 
       <button
@@ -94,15 +89,9 @@
         title={isMaximized ? 'Restore' : 'Maximize'}
       >
         {#if isMaximized}
-          <!-- Restore Icon -->
-          <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 0v3H0v7h7V7h3V0H3zm6 6H7V3H4V1h5v5zM6 9H1V4h5v5z" fill="currentColor" />
-          </svg>
+          [=]
         {:else}
-          <!-- Maximize Icon -->
-          <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0v10h10V0H0zm9 9H1V1h8v8z" fill="currentColor" />
-          </svg>
+          [ ]
         {/if}
       </button>
 
@@ -113,19 +102,12 @@
         aria-label="Close"
         title="Close"
       >
-        <!-- Close Icon -->
-        <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M1.354.646a.5.5 0 0 0-.708.708L4.293 5 .646 8.646a.5.5 0 0 0 .708.708L5 5.707l3.646 3.647a.5.5 0 0 0 .708-.708L5.707 5l3.647-3.646a.5.5 0 0 0-.708-.708L5 4.293 1.354.646z"
-            fill="currentColor"
-          />
-        </svg>
+        X
       </button>
     </div>
   </div>
 </div>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
   @import "./titlebar.css";
 </style>

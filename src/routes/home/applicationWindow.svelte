@@ -21,6 +21,7 @@
       blur = true;
       console.log("Enabling Blur");
     }
+    /** @param {any} event */
     async function handleSubmit(event) {
       event.preventDefault();
       console.log("Form submitted:", { varName, varValue });
@@ -115,62 +116,61 @@
         bind:open={blur} 
         outsideclose={false} 
         onsubmit={handleSubmit}
-        class="!bg-[#111317] !dark:bg-[#111317] border border-white/10 rounded-lg shadow-xl backdrop:bg-black/60 text-white"
-        bodyClass="p-6 space-y-6 !bg-[#111317] rounded-lg"
-        dialogClass="fixed top-0 start-0 end-0 h-modal md:h-full w-full inset-0 z-50 flex items-center justify-center p-4"
-        closeBtnClass="text-gray-400 hover:text-white cursor-pointer absolute top-4 end-4"
+        class="!bg-[var(--retro-panel)] !dark:bg-[var(--retro-panel)] border-2 border-[var(--retro-neon)] rounded-none shadow-[4px_4px_0px_0px_var(--retro-neon)] backdrop:bg-black/80 text-[var(--retro-neon)]"
+        bodyClass="p-6 space-y-6 !bg-[var(--retro-panel)] rounded-none"
+        closeBtnClass="text-[var(--retro-neon)] hover:text-white cursor-pointer absolute top-4 end-4"
       >
         {#snippet header()}
           <div class="flex items-center gap-2">
-            <div class="p-1.5 bg-[#111317]/10 text-[#72ddc3] rounded">
+            <div class="p-1.5 bg-[var(--retro-neon)]/10 text-[var(--retro-neon)] rounded-none">
               <Icon name="add" size={20} strokeWidth={2} />
             </div>
-            <h3 class="text-xl font-semibold text-white">Load New Environment Variable</h3>
+            <h3 class="text-xl font-bold text-[var(--retro-neon)] uppercase tracking-wider">Load New Environment Variable</h3>
           </div>
         {/snippet}
 
         <div class="space-y-4">
           <div>
-            <Label for="var-name" class="block mb-2 text-sm font-medium text-gray-300">Variable Name</Label>
+            <Label for="var-name" class="block mb-2 text-sm font-bold text-[var(--retro-neon)] uppercase">Variable Name</Label>
             <Input 
               id="var-name" 
               type="text" 
               placeholder="e.g. DATABASE_URL" 
               bind:value={varName} 
               required 
-              class="w-full bg-[#111317] border border-white/10 text-white placeholder-gray-500 rounded-md focus:ring-[#72ddc3] focus:border-[#72ddc3] p-2.5"
+              class="w-full bg-[var(--retro-bg)] border-2 border-[var(--retro-neon)] text-[var(--retro-neon)] placeholder-[var(--retro-neon)]/50 rounded-none focus:ring-0 focus:border-[var(--retro-neon)] p-2.5 font-mono"
             />
           </div>
 
           <div>
-            <Label for="var-value" class="block mb-2 text-sm font-medium text-gray-300">Variable Value</Label>
+            <Label for="var-value" class="block mb-2 text-sm font-bold text-[var(--retro-neon)] uppercase">Variable Value</Label>
             <Input 
               id="var-value" 
               type="text" 
               placeholder="e.g. postgresql://user:pass@localhost:5432/db" 
               bind:value={varValue} 
               required 
-              class="w-full bg-[#111317] border border-white/10 text-white placeholder-gray-500 rounded-md focus:ring-[#72ddc3] focus:border-[#72ddc3] p-2.5"
+              class="w-full bg-[var(--retro-bg)] border-2 border-[var(--retro-neon)] text-[var(--retro-neon)] placeholder-[var(--retro-neon)]/50 rounded-none focus:ring-0 focus:border-[var(--retro-neon)] p-2.5 font-mono"
             />
           </div>
         </div>
 
         {#snippet footer()}
-          <div class="flex justify-end gap-3 w-full border-t border-white/5 pt-4">
+          <div class="flex justify-end gap-3 w-full border-t-2 border-[var(--retro-neon)] pt-4">
             <Button 
               color="alternative" 
               onclick={() => blur = false}
-              class="bg-transparent border border-white/10 hover:bg-white/5 text-gray-300 hover:text-white cursor-pointer"
+              class="bg-transparent border-2 border-[var(--retro-neon)] hover:bg-[var(--retro-neon)] text-[var(--retro-neon)] hover:text-black font-bold cursor-pointer rounded-none uppercase transition-none"
             >
               Cancel
             </Button>
             <Button 
               type="submit" 
               disabled={submitting}
-              class="bg-[#72ddc3] hover:bg-[#5ec4ad] text-black font-semibold px-5 cursor-pointer flex items-center justify-center min-w-[80px]"
+              class="bg-[var(--retro-neon)] hover:bg-[var(--retro-bg)] border-2 border-[var(--retro-neon)] text-black hover:text-[var(--retro-neon)] font-bold px-5 cursor-pointer flex items-center justify-center min-w-[80px] rounded-none shadow-[2px_2px_0px_0px_var(--retro-neon)] hover:shadow-none translate-y-0 hover:translate-y-[2px] transition-none uppercase"
             >
               {#if submitting}
-                <Spinner size="4" color="current" />
+                <Spinner size="4" color="green" />
               {:else}
                 Load
               {/if}
@@ -205,7 +205,6 @@
 </div>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
   @import "../component/sidebar.css";
 
   :global(button), :global(input[type="radio"]), :global(label), :global(.cursor-pointer) {
@@ -213,13 +212,15 @@
   }
 
   :global(dialog), :global(dialog form) {
-    background: #111317 !important;
-    background-color: #111317 !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background: var(--retro-panel) !important;
+    background-color: var(--retro-panel) !important;
+    border: 2px solid var(--retro-neon) !important;
+    box-shadow: 6px 6px 0px var(--retro-neon) !important;
+    border-radius: 0 !important;
   }
 
   :global(dialog *), :global(dialog div) {
-    border-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: var(--retro-neon) !important;
   }
 
   :global(dialog button) {
@@ -230,8 +231,8 @@
     display: grid;
     grid-template-columns: 260px 1fr;
     height: 100vh;
-    font-family: 'Inter', 'Segoe UI Variable', 'Segoe UI', sans-serif;
-    background: #191b1f;
+    font-family: 'Courier New', Courier, monospace;
+    background: var(--retro-bg);
   }
 
   main {
