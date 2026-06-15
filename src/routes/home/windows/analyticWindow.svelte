@@ -6,6 +6,7 @@
     let env_files = [];
     let total_variable_count = 0;
     let master_envirment_list = [];
+    let final_master_envirment_count_list = {};
 
     async function get_env_list() {
         try {
@@ -45,6 +46,18 @@
                 master_envirment_list.push(envirment_variable);
             }
             // console.log(variables_in_current_file);
+        }
+    }
+
+    async function implement_count() {
+        for (let item of master_envirment_list) {
+            // console.log(item);
+            if (final_master_envirment_count_list[item] == undefined) {
+                final_master_envirment_count_list[item] = 1;
+            } else {
+                final_master_envirment_count_list[item] =
+                    final_master_envirment_count_list[item] + 1;
+            }
         }
     }
 
@@ -97,7 +110,8 @@
         console.clear();
         await get_env_list();
         await initiate_giant_pile();
-        console.log(master_envirment_list);
+        await implement_count();
+        console.log(final_master_envirment_count_list);
         // scan_all_files_and_return_total_count();
     });
 </script>
