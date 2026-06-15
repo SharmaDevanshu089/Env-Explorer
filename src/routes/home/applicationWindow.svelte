@@ -44,7 +44,7 @@
   <aside class="sidebar" data-tauri-drag-region>
     <header class="sidebar-header">
         <div class="logo">
-            🚀
+            <img src="/appicon.png" alt="Env Explorer" class="w-8 h-8 object-contain drop-shadow-md" />
         </div>
 
         <div class="title-container" data-tauri-drag-region>
