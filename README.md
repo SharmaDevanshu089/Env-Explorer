@@ -11,7 +11,8 @@
 
 Env Explorer is a desktop application designed to find, manage, and analyze local environment variables (`.env` files) across your system. It provides a visual dashboard to track configurations, view analytical data on environment variable distribution, and launch specific environments directly into an isolated terminal.
 
-![Screenshot Placeholder](screenshot.png)
+![Screenshot Placeholder](https://i.postimg.cc/26n0Y8vB/1.png)
+
 
 ## Architecture and Design
 
