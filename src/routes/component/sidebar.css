@@ -36,51 +36,38 @@
 }
 
 .title {
+  font-size: 16px;
+  font-weight: 700;
   margin: 0;
-  color: var(--retro-neon);
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 0px rgba(57, 255, 20, 0.4);
+  color: var(--cat-text);
 }
 
 .subtitle {
-  margin: 0;
-  font-size: 11px;
-  color: var(--retro-neon);
-  opacity: 0.7;
-  font-weight: 400;
+  font-size: 12px;
+  color: var(--cat-subtext);
+  margin: 2px 0 0 0;
 }
 
 .create-btn {
+  margin: 24px 16px 16px;
+  background-color: var(--cat-mauve);
+  color: var(--cat-base);
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 24px;
-  
-  border: 2px solid var(--retro-neon);
-  
-  background: var(--retro-bg);
-  color: var(--retro-neon);
-  
-  font-size: 13px;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-weight: 600;
   cursor: pointer;
-  box-shadow: 3px 3px 0px var(--retro-neon);
-  transition: transform 0.1s, box-shadow 0.1s, background 0.1s;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px var(--cat-mauve-dim);
 }
 
 .create-btn:hover {
-  background: var(--retro-neon);
-  color: #000;
-  box-shadow: none;
-  transform: translate(3px, 3px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--cat-mauve-dim);
 }
 
 .create-btn :global(svg) {
@@ -88,47 +75,38 @@
 }
 
 .navigation {
+  flex: 1;
+  padding: 0 12px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  flex: 1;
+  gap: 4px;
 }
 
 .nav-item {
   display: flex;
   align-items: center;
   gap: 12px;
-  
   padding: 10px 12px;
-  
-  border: 2px solid transparent;
-  
+  border: none;
   background: transparent;
-  color: var(--retro-neon);
-  opacity: 0.8;
-  
-  font-size: 13px;
-  font-weight: bold;
-  text-align: left;
-  text-transform: uppercase;
+  color: var(--cat-subtext);
+  border-radius: 10px;
   cursor: pointer;
-  transition: background 0.1s, color 0.1s;
+  transition: all 0.2s ease;
+  text-align: left;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .nav-item:hover {
-  background: var(--retro-neon);
-  color: #000;
-  opacity: 1;
+  background-color: var(--cat-surface0);
+  color: var(--cat-text);
 }
 
 .nav-item.active {
-  background: var(--retro-neon-dim);
-  color: var(--retro-neon);
-  border-left: 4px solid var(--retro-neon);
-  border-right: none;
-  border-top: none;
-  border-bottom: none;
-  opacity: 1;
+  background-color: var(--cat-mauve-dim);
+  color: var(--cat-mauve);
+  font-weight: 600;
 }
 
 .nav-item :global(svg) {

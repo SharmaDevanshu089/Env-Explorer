@@ -86,47 +86,44 @@
         console.log("[Frontend] projectWindow.svelte component has mounted successfully in the DOM.");
         first_update();
     });
-    // TODO: Change the theme to retro this is definatly ai color scheme
 </script>
-<div class="window-root flex justify-center items-center">
+<div class="window-root flex justify-center items-start overflow-y-auto h-[calc(100vh-88px)] w-full no-scroll">
     {#if state === "loading"}
     <!-- Keep this div full seze of avilable space and make it center i need spinner in center -->
     <div class="flex flex-col justify-center items-center w-full h-[calc(100vh-88px)]">
-        <Spinner type="bars" color="green" size="16"/>
-        <span class="text-[var(--retro-neon)] mt-4 font-bold uppercase tracking-widest">{loadingtext}</span>
+        <Spinner type="bars" color="purple" size="16"/>
+        <span class="text-[var(--cat-subtext)] mt-4 font-medium tracking-wide">{loadingtext}</span>
     </div>
     {/if}
     {#if state === "loaded"}
         <div class="flex flex-col gap-3 w-full max-w-7xl mx-auto p-2 pl-15 pr-15">
-            <div class="flex justify-between items-center mb-2 border-b-2 border-[var(--retro-neon)] pb-3">
+            <div class="flex justify-between items-center mb-2 border-b border-[var(--cat-surface0)] pb-3">
                 <div class="p-2">
-                    <h2 class="text-4xl font-bold text-[var(--retro-neon)] uppercase tracking-wider drop-shadow-[2px_2px_0px_rgba(57,255,20,0.5)] pt-8">Projects</h2>
-                    <p class="text-lg text-[var(--retro-neon)]/70 uppercase font-bold mt-2">Environment configurations found on your system</p>
+                    <h2 class="text-4xl font-bold text-[var(--cat-text)] tracking-wider pt-8">Projects</h2>
+                    <p class="text-lg text-[var(--cat-subtext)] font-medium mt-2">Environment configurations found on your system</p>
                 </div>
-                <span class="text-xs px-2.5 py-1 bg-[var(--retro-neon)]/10 text-[var(--retro-neon)] rounded-none border-2 border-[var(--retro-neon)] font-bold uppercase shadow-[2px_2px_0px_0px_var(--retro-neon)]">
+                <span class="text-xs px-2.5 py-1 bg-[var(--cat-surface0)] text-[var(--cat-mauve)] rounded-lg border border-[var(--cat-surface1)] font-medium">
                     {env_data.length} Found
                 </span>
             </div>
             
             <div class="no-scroll flex flex-col gap-4 overflow-y-auto max-h-[calc(100vh-200px)] p-2">
                 {#each env_data as env}
-                    <div class="flex justify-between items-center p-4 bg-[var(--retro-panel)] rounded-none border-2 border-[var(--retro-neon)] shadow-[4px_4px_0px_0px_var(--retro-neon)] transition-all duration-100">
-                        <div class="flex flex-col gap-1">
-                            <h5 class="text-sm font-bold text-[var(--retro-neon)] uppercase tracking-wide">{env.name}</h5>
-                            <p class="text-xs text-[var(--retro-neon)]/70 font-mono select-all">{env.path}</p>
+                    <div class="flex justify-between items-center p-5 bg-[var(--cat-mantle)] rounded-xl border border-[var(--cat-surface0)] shadow-sm hover:shadow-md transition-all duration-200">
+                        <div class="flex flex-col">
+                            <span class="text-lg font-bold text-[var(--cat-text)]">{env.name}</span>
+                            <span class="text-sm text-[var(--cat-subtext)]">{env.path}</span>
                         </div>
-                        <Button 
-                            size="xs" 
-                            disabled={env.loading}
-                            onclick={() => handleLaunchTerminal(env)}
-                            class="bg-transparent text-[var(--retro-neon)] border-2 border-[var(--retro-neon)] hover:bg-[var(--retro-neon)] hover:text-black rounded-none shadow-[2px_2px_0px_0px_var(--retro-neon)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] uppercase font-bold transition-none w-32 flex items-center justify-center"
+                        <button 
+                            on:click={() => handleLaunchTerminal(env)}
+                            class="bg-[var(--cat-surface0)] text-[var(--cat-text)] hover:bg-[var(--cat-surface1)] hover:text-[var(--cat-mauve)] border border-[var(--cat-surface1)] rounded-lg shadow-sm font-medium transition-all duration-200 w-32 py-2 flex items-center justify-center gap-2"
                         >
                             {#if env.loading}
-                                <Spinner size="4" color="green" />
+                                <Spinner size="4" color="purple" />
                             {:else}
                                 Terminal {#if env.count !== undefined}({env.count}){/if}
                             {/if}
-                        </Button>
+                        </button>
                     </div>
                 {/each}
             </div>

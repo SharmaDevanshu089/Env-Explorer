@@ -9,10 +9,10 @@
   margin: 0;
   box-sizing: border-box;
 
-  background: var(--retro-panel);
-  border-bottom: 2px solid var(--retro-neon);
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
+  background: var(--cat-mantle);
+  border-bottom: 1px solid var(--cat-surface0);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
 
   user-select: none;
   -webkit-user-select: none;
@@ -35,8 +35,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--retro-neon);
-  font-weight: bold;
+  color: var(--cat-subtext);
+  font-weight: 600;
   font-size: 14px;
 }
 
@@ -57,25 +57,26 @@
   padding: 0;
   margin: 0;
   background: transparent;
-  border: 2px solid transparent;
-  color: var(--retro-neon);
+  border: none;
+  border-radius: 8px;
+  color: var(--cat-subtext);
   cursor: pointer;
   font-family: inherit;
   font-size: 14px;
   font-weight: bold;
   outline: none;
+  transition: all 0.2s ease;
 }
 
 .titlebar__action-btn:hover {
-  background: var(--retro-neon);
-  color: #000;
-  border: 2px solid var(--retro-neon);
+  background: var(--cat-surface0);
+  color: var(--cat-text);
 }
 
 .titlebar__separator {
-  width: 2px;
-  height: 20px;
-  background: var(--retro-neon);
+  width: 1px;
+  height: 16px;
+  background: var(--cat-surface0);
   margin: 0 10px;
 }
 
@@ -100,24 +101,24 @@
   margin: 0;
 
   background: transparent;
-  border: 2px solid transparent;
+  border: none;
+  border-radius: 8px;
   outline: none;
   cursor: pointer;
 
-  color: var(--retro-neon);
+  color: var(--cat-subtext);
   font-family: inherit;
   font-size: 14px;
   font-weight: bold;
+  transition: all 0.2s ease;
 }
 
 .titlebar__btn:hover {
-  background: var(--retro-neon);
-  color: #000;
-  border: 2px solid var(--retro-neon);
+  background: var(--cat-surface0);
+  color: var(--cat-text);
 }
 
 .titlebar__btn--close:hover {
-  background: #ff0000;
-  color: #000;
-  border: 2px solid #ff0000;
+  background: #f38ba8; /* Catppuccin Red */
+  color: var(--cat-base);
 }

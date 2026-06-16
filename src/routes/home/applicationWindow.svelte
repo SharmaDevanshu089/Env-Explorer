@@ -116,61 +116,61 @@
         bind:open={blur} 
         outsideclose={false} 
         onsubmit={handleSubmit}
-        class="!bg-[var(--retro-panel)] !dark:bg-[var(--retro-panel)] border-2 border-[var(--retro-neon)] rounded-none shadow-[4px_4px_0px_0px_var(--retro-neon)] backdrop:bg-black/80 text-[var(--retro-neon)]"
-        bodyClass="p-6 space-y-6 !bg-[var(--retro-panel)] rounded-none"
-        closeBtnClass="text-[var(--retro-neon)] hover:text-white cursor-pointer absolute top-4 end-4"
+        class="!bg-[var(--cat-mantle)] !dark:bg-[var(--cat-mantle)] border border-[var(--cat-surface0)] rounded-xl shadow-lg shadow-[var(--cat-crust)] backdrop:bg-black/60 text-[var(--cat-text)]"
+        bodyClass="p-6 space-y-6 !bg-[var(--cat-mantle)] rounded-xl"
+        closeBtnClass="text-[var(--cat-subtext)] hover:text-[var(--cat-text)] cursor-pointer absolute top-4 end-4 transition-colors"
       >
         {#snippet header()}
           <div class="flex items-center gap-2">
-            <div class="p-1.5 bg-[var(--retro-neon)]/10 text-[var(--retro-neon)] rounded-none">
+            <div class="p-1.5 bg-[var(--cat-mauve)]/10 text-[var(--cat-mauve)] rounded-lg">
               <Icon name="add" size={20} strokeWidth={2} />
             </div>
-            <h3 class="text-xl font-bold text-[var(--retro-neon)] uppercase tracking-wider">Load New Environment Variable</h3>
+            <h3 class="text-xl font-bold text-[var(--cat-text)] tracking-wide">Load New Environment Variable</h3>
           </div>
         {/snippet}
 
         <div class="space-y-4">
           <div>
-            <Label for="var-name" class="block mb-2 text-sm font-bold text-[var(--retro-neon)] uppercase">Variable Name</Label>
+            <Label for="var-name" class="block mb-2 text-sm font-medium text-[var(--cat-text)]">Variable Name</Label>
             <Input 
               id="var-name" 
               type="text" 
               placeholder="e.g. DATABASE_URL" 
               bind:value={varName} 
               required 
-              class="w-full bg-[var(--retro-bg)] border-2 border-[var(--retro-neon)] text-[var(--retro-neon)] placeholder-[var(--retro-neon)]/50 rounded-none focus:ring-0 focus:border-[var(--retro-neon)] p-2.5 font-mono"
+              class="w-full bg-[var(--cat-base)] border border-[var(--cat-surface0)] text-[var(--cat-text)] placeholder-[var(--cat-subtext)] rounded-lg focus:ring-0 focus:border-[var(--cat-mauve)] p-2.5 font-mono"
             />
           </div>
 
           <div>
-            <Label for="var-value" class="block mb-2 text-sm font-bold text-[var(--retro-neon)] uppercase">Variable Value</Label>
+            <Label for="var-value" class="block mb-2 text-sm font-medium text-[var(--cat-text)]">Variable Value</Label>
             <Input 
               id="var-value" 
               type="text" 
               placeholder="e.g. postgresql://user:pass@localhost:5432/db" 
               bind:value={varValue} 
               required 
-              class="w-full bg-[var(--retro-bg)] border-2 border-[var(--retro-neon)] text-[var(--retro-neon)] placeholder-[var(--retro-neon)]/50 rounded-none focus:ring-0 focus:border-[var(--retro-neon)] p-2.5 font-mono"
+              class="w-full bg-[var(--cat-base)] border border-[var(--cat-surface0)] text-[var(--cat-text)] placeholder-[var(--cat-subtext)] rounded-lg focus:ring-0 focus:border-[var(--cat-mauve)] p-2.5 font-mono"
             />
           </div>
         </div>
 
         {#snippet footer()}
-          <div class="flex justify-end gap-3 w-full border-t-2 border-[var(--retro-neon)] pt-4">
+          <div class="flex justify-end gap-3 w-full border-t border-[var(--cat-surface0)] pt-4">
             <Button 
               color="alternative" 
               onclick={() => blur = false}
-              class="bg-transparent border-2 border-[var(--retro-neon)] hover:bg-[var(--retro-neon)] text-[var(--retro-neon)] hover:text-black font-bold cursor-pointer rounded-none uppercase transition-none"
+              class="bg-transparent border border-[var(--cat-surface0)] hover:bg-[var(--cat-surface0)] text-[var(--cat-text)] font-medium cursor-pointer rounded-lg transition-colors"
             >
               Cancel
             </Button>
             <Button 
               type="submit" 
               disabled={submitting}
-              class="bg-[var(--retro-neon)] hover:bg-[var(--retro-bg)] border-2 border-[var(--retro-neon)] text-black hover:text-[var(--retro-neon)] font-bold px-5 cursor-pointer flex items-center justify-center min-w-[80px] rounded-none shadow-[2px_2px_0px_0px_var(--retro-neon)] hover:shadow-none translate-y-0 hover:translate-y-[2px] transition-none uppercase"
+              class="bg-[var(--cat-mauve)] hover:opacity-90 border-none text-[var(--cat-base)] font-bold px-5 cursor-pointer flex items-center justify-center min-w-[80px] rounded-lg shadow-md transition-all"
             >
               {#if submitting}
-                <Spinner size="4" color="green" />
+                <Spinner size="4" color="purple" />
               {:else}
                 Load
               {/if}
@@ -212,15 +212,15 @@
   }
 
   :global(dialog), :global(dialog form) {
-    background: var(--retro-panel) !important;
-    background-color: var(--retro-panel) !important;
-    border: 2px solid var(--retro-neon) !important;
-    box-shadow: 6px 6px 0px var(--retro-neon) !important;
-    border-radius: 0 !important;
+    background: var(--cat-mantle) !important;
+    background-color: var(--cat-mantle) !important;
+    border: 1px solid var(--cat-surface0) !important;
+    box-shadow: 0 8px 32px var(--cat-crust) !important;
+    border-radius: 12px !important;
   }
 
   :global(dialog *), :global(dialog div) {
-    border-color: var(--retro-neon) !important;
+    border-color: var(--cat-surface0) !important;
   }
 
   :global(dialog button) {
@@ -231,8 +231,8 @@
     display: grid;
     grid-template-columns: 260px 1fr;
     height: 100vh;
-    font-family: 'Courier New', Courier, monospace;
-    background: var(--retro-bg);
+    font-family: 'Inter', sans-serif;
+    background: var(--cat-base);
   }
 
   main {

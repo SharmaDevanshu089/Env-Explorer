@@ -1,22 +1,34 @@
 :root {
-  --retro-bg: #1a0f00;
-  --retro-panel: #241600;
-  --retro-neon: #39ff14;
-  --retro-neon-dim: rgba(57, 255, 20, 0.2);
-  --retro-border: #39ff14;
-  --retro-text: #39ff14;
+  --cat-base: #1e1e2e;
+  --cat-mantle: #181825;
+  --cat-crust: #11111b;
+  --cat-surface0: #313244;
+  --cat-surface1: #45475a;
+  --cat-surface2: #585b70;
+  --cat-text: #cdd6f4;
+  --cat-subtext: #a6adc8;
+  --cat-mauve: #cba6f7;
+  --cat-lavender: #b4befe;
+  --cat-mauve-dim: rgba(203, 166, 247, 0.15);
+
+  --retro-bg: var(--cat-base);
+  --retro-panel: var(--cat-mantle);
+  --retro-neon: var(--cat-text);
+  --retro-neon-dim: var(--cat-mauve-dim);
 }
 
 .no-scroll::-webkit-scrollbar {
-  width: 8px;        
+  width: 6px;        
 }
 .no-scroll::-webkit-scrollbar-track {
-  background: var(--retro-panel); 
-  border-left: 1px solid var(--retro-neon-dim);
+  background: var(--cat-base); 
 }
 .no-scroll::-webkit-scrollbar-thumb {
-  background-color: var(--retro-neon);
-  border-radius: 0px;
+  background-color: var(--cat-surface1);
+  border-radius: 10px;
+}
+.no-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: var(--cat-surface2);
 }
 .no-scroll{
   padding-right: 5px;
